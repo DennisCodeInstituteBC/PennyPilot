@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-denniscodein-pennypilot-rewm685nnj5.ws.codeinstitute-ide.net']
 
+# code to allow IDE and Heroku to pass CSRF Verification
+CSRF_TRUSTED_ORIGINS = ['https://*.codeinstitute-ide.net',
+                        'https://*.herokuapp.com']
 
 # Application definition
 
@@ -37,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'auth_app',
+    'expense_app',
+    'dashboard_app',
 ]
 
 MIDDLEWARE = [
