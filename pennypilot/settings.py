@@ -20,12 +20,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-aevk+zga-5m*3plp$w3*s1efj5mmlq^gr1ntjxt(l0%q$8ygr-'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-denniscodein-pennypilot-rewm685nnj5.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['8000-denniscodein-pennypilot-rewm685nnj5.ws.codeinstitute-ide.net',
+'.herokuapp.com']
 
 # code to allow IDE and Heroku to pass CSRF Verification
 CSRF_TRUSTED_ORIGINS = ['https://*.codeinstitute-ide.net',
@@ -79,11 +80,15 @@ WSGI_APPLICATION = 'pennypilot.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 
