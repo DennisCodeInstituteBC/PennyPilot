@@ -9,6 +9,43 @@
 - Budget-Conscious Users: People needing to look into a budget or understand spending patterns.
 - Young Individuals/Students: New to managing finances, seeking an easy-to-use tool.
 
+## Wireframe
+<details>
+ <summary> LogIn / Sign Up Page </summary>
+ 
+![LoginPage-Wireframe](https://github.com/user-attachments/assets/b92c121c-734d-4076-a433-a839f02f8a6b)
+
+![SignUpPage - Wireframe](https://github.com/user-attachments/assets/d2e636b1-e9c9-4274-a218-25708e37421f)
+
+![LogIn+SignUp Page - Tablet - Wireframe](https://github.com/user-attachments/assets/c2693296-fbb5-4dfb-8a6a-d4878807b74c)
+
+</details>
+<details>
+<summary> Dashboard </summary>
+ 
+ ![DashBoard - Wireframe](https://github.com/user-attachments/assets/cfc55560-d327-45c5-b19a-f912e72fe221)
+ ![DashBoard - Tablet - Wireframe](https://github.com/user-attachments/assets/d629d2a5-197b-4c56-be58-5a675de288a5)
+</details>
+<details>
+<summary> Expense Page </summary>
+ 
+![Expense Page - Wireframe](https://github.com/user-attachments/assets/f3014c44-f033-47a2-89fa-16d885b49a3d)
+![Add Expense Page - Wireframe](https://github.com/user-attachments/assets/d4504e30-64a1-4df8-9421-d172f248f844)
+![Expense - Tablet - Wireframe](https://github.com/user-attachments/assets/92019a7e-4112-4661-ac6b-44706d6e8028)
+</details>
+<details>
+<summary> UserAccount </summary>
+ 
+![UserAccount - Wireframe](https://github.com/user-attachments/assets/f43045b8-3ef6-47e3-b55f-0f952ea4223f)
+![Update Password - Wireframe](https://github.com/user-attachments/assets/86b677f9-0188-446a-93e8-3d41ce503d7a)
+![Account - Tablet - Wireframe](https://github.com/user-attachments/assets/bb35d88d-e4ce-4eae-a54b-b5df62fe916f)
+</details>
+
+<details>
+<summary> Side Navbar </summary>
+ 
+![Tablet - SideNav - Wireframe](https://github.com/user-attachments/assets/a4fa13e5-bcb4-4c83-b7d3-ed0a4481eac1)
+</details>
 
 To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
