@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["8000-denniscodein-pennypilot-rewm685nnj5.ws.codeinstitute-ide.net",
+ALLOWED_HOSTS = ["8000-denniscodein-pennypilot-8y7c9vcettr.ws.codeinstitute-ide.net",
                 ".herokuapp.com"]
 
 # code to allow IDE and Heroku to pass CSRF Verification
