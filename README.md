@@ -1,5 +1,3 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
 ## Overview
 
  The Expense Tracker helps users manage and analyze their spending with a simple platform for recording expenses, categorizing them, and generating reports. It aims to make personal finance management easy and effective, supporting better budgeting and financial decision-making.
@@ -10,6 +8,7 @@
 - Young Individuals/Students: New to managing finances, seeking an easy-to-use tool.
 
 ## Wireframe
+The wireframes for PennyPilot provide a visual guide to the user interface and layout. They outline key pages, including the login, signup, dashboard, and expense management screens. Each wireframe illustrates the placement of essential elements, such as navigation menus, input fields, and buttons, ensuring a user-friendly experience. By mapping out the user journey and interaction flow, these wireframes serve as a foundation for the application's design and development, helping to visualize the overall user experience before implementation.
 <details>
  <summary> LogIn / Sign Up Page </summary>
  
@@ -46,6 +45,81 @@
  
 ![Tablet - SideNav - Wireframe](https://github.com/user-attachments/assets/a4fa13e5-bcb4-4c83-b7d3-ed0a4481eac1)
 </details>
+
+## Entity-Relationship Diagram 
+<details>
+ <summary> The Entity-Relationship (ER) diagram serves as a visual blueprint of the database structure, illustrating the relationships between different entities. 
+  The database structure for PennyPolit includes entities such as Users, Expense, Category, and Notifications, with defined relationships </summary>
+
+![image](https://github.com/user-attachments/assets/cec62158-87b3-4586-bbbf-aaf8e27048c2)
+</details>
+
+## User Stories
+User stories are used to help define the functionality from the user's perspective. Each story describes a feature or requirement straightforwardly, focusing on the user's needs and goals. 
+
+1. As a new user, I want to create an account to securely track my expenses and access my data from any device.
+ 
+    **Acceptance Criteria:**
+   
+        - Users can sign up with an email and password.
+        - Users can log in with credentials.
+
+3. As a user, I want to add my daily expenses easily so that I can keep track of my spending in real-time.
+   
+   **Acceptance Criteria:**
+   
+       - Users can enter the expense amount, category, date, and notes.
+       - Users can save the expense entry.
+       - The user receives confirmation that the expense has been added.
+
+3. As a user, I want to categorize my expenses so that I can better understand where my money is going.
+
+   **Acceptance Criteria:**
+
+       - Users can select from predefined categories or create custom categories.
+       - Users can view and edit categories.
+
+3. As a user, I want to view a summary of my expenses by category and date range so that I can see where I’m spending the most.
+
+    **Acceptance Criteria:**
+            
+       - Users can generate and view reports with graphs and charts.
+       - Users can filter the summary by category and date range.
+
+4. As a user, I want to search for specific expenses by keyword so that I can easily find and review past entries.
+      **Acceptance Criteria**:
+   
+       - Users can enter a search term to find expenses.
+       - Search results display matching entries.
+5. As a user, I want to be able to edit or delete my expenses to correct mistakes or remove incorrect entries.
+
+     **Acceptance Criteria:**
+
+       - Users can edit expense details (amount, category, date, notes).
+       - Users can delete expenses.
+       - The user receives a confirmation of changes or deletions.
+6. As a user, I want to receive reminders to add my expenses so I don’t forget to track my spending regularly.
+
+   **Acceptance Criteria**:
+   
+       - Users can set up reminders for adding expenses.
+       - Users receive notifications according to their preferences.
+7. As a user, I want to securely log in and manage my account details so that my data is protected and I can keep my information up to date.
+
+   **Acceptance Criteria:**
+
+       - Users can log in and log out securely.
+       - Users can update their profile information and change their password.
+8. As a user, I want to filter my expenses by amount, category, and date range to analyze specific segments of my spending.
+
+   **Acceptance Criteria:**
+
+       - Users can apply filters to view expenses by amount, category, and date range.
+       - Filtered results are displayed accurately.
+##Scope
+- Users being able to create and log in with their accounts
+- Users adding in expenses and being able to see it updated on the expense sheet
+- Users able to edit and delete existing expense
 
 To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
