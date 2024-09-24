@@ -19,7 +19,6 @@ if os.path.isfile('env.py'):
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -29,13 +28,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-<<<<<<< HEAD
 ALLOWED_HOSTS = ["8000-denniscodein-pennypilot-5ri2dnzyl34.ws.codeinstitute-ide.net",
-=======
-ALLOWED_HOSTS = ["8000-denniscodein-pennypilot-8y7c9vcettr.ws.codeinstitute-ide.net",
->>>>>>> 1ecf56440f809ed759d65530fcf2df5bfc08fdb8
                 ".herokuapp.com"]
 
 # code to allow IDE and Heroku to pass CSRF Verification
@@ -137,9 +132,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
 
 
 
