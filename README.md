@@ -116,52 +116,53 @@ User stories are used to help define the functionality from the user's perspecti
 
        - Users can apply filters to view expenses by amount, category, and date range.
        - Filtered results are displayed accurately.
-##Scope
+## Scope
 - Users being able to create and log in with their accounts
 - Users adding in expenses and being able to see it updated on the expense sheet
-- Users able to edit and delete existing expense
+- Users can edit and delete existing expense
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Colour Scheme/ Font-Family
+<details>
+ <summary> Colour Scheme </summary>
+1. Primary Colour: Blue (#007BFF) 
 
-`python3 -m http.server`
+ - A calm and trustworthy colour often which provides a professional feel while not being overwhelming.
+ 
+ ![image](https://github.com/user-attachments/assets/d28e3c3f-8093-4dd3-9ddd-3bda689f7e28)
+ 
+ 2. Accent Colors: Green (#28A745) Orange (#FFC107)
 
-A blue button should appear to click: _Make Public_,
+- Green is often used for key elements like buttons for actions (e.g., 'Save' or 'Add Expense') and positive indicators (e.g., staying under budget), symbolizing successful transactions and financial stability.
+- Orange is an energetic colour commonly used to highlight important elements like warning messages, or key graphics, ensuring they stand out and capture user attention.
+  
+ ![image](https://github.com/user-attachments/assets/9f72808f-55c8-4085-90bb-ce1580776795)
+ ![image](https://github.com/user-attachments/assets/a9b0f52e-2c49-4057-9a2a-871eea6849b8)
 
-Another blue button should appear to click: _Open Browser_.
+5. Neutral Background Colors: Light Gray (#F8F9FA) White (#FFFFFF)
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+- Light Gray is ideal for large background areas such as the main content sections or sidebars, offering a soft contrast that helps key elements like text, buttons, and graphics stand out while keeping the layout open and modern.
+- White, commonly used for background areas like forms, cards, or key content sections, ensuring maximum clarity for text and interface elements, giving the design a clean and crisp appearance."
+   
+ ![image](https://github.com/user-attachments/assets/85bfbe86-5587-4070-b91c-f23c950a9b2f)
+ ![image](https://github.com/user-attachments/assets/4a2650fb-799e-47e2-973c-d754b3e876bb)
 
-A blue button should appear to click: _Make Public_,
+8. Text Colors: Black (#000000) White (#FFFFFF)
 
-Another blue button should appear to click: _Open Browser_.
+- Black will be used for headings or important text, creating a bold contrast to draw attention and emphasize key information or section titles.
+- White will be utilized to contrast with the button colours, enhancing readability and ensuring the button text stands out clearly.
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+![image](https://github.com/user-attachments/assets/e9f7fc58-b1d2-4a24-81c1-be6b2fe4af20)
+![image](https://github.com/user-attachments/assets/4a2650fb-799e-47e2-973c-d754b3e876bb)
+</details>
 
-To log into the Heroku toolbelt CLI:
+<details>
+ <summary> Font Selection from Google Fonts </summary>
+ 
+1. **[Montserrat](https://fonts.google.com/specimen/Montserrat)**: A contemporary, stylish sans-serif font with a strong impact, perfect for headings and titles. It delivers a bold, reliable, and professional appearance.  
+2. **[Roboto](https://fonts.google.com/specimen/Roboto)**: A clean and highly legible sans-serif font ideal for body text. Its widespread use in web applications attests to its readability and modern aesthetic.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
-
-### Connecting your Mongo database
-
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
-
-------
-
+ 
+</details>
 ## Release History
 
 We continually tweak and adjust this template to help give you the best experience. Here is the version history:
