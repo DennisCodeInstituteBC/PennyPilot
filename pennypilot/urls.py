@@ -16,10 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.shortcuts import redirect 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', lambda request: redirect('/auth/login/', permanent=False)), #making the login page default when opening the browser
     path('auth/', include('auth_app.urls')),  # Authentication app
     path('expenses/', include('expense_app.urls')),  # Expense management app
     path('dashboard/', include('dashboard_app.urls')),  # Dashboard app
+    
 ]

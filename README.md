@@ -1,54 +1,168 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+## Overview
 
-Welcome Dennis Limbu,
+ The Expense Tracker helps users manage and analyze their spending with a simple platform for recording expenses, categorizing them, and generating reports. It aims to make personal finance management easy and effective, supporting better budgeting and financial decision-making.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+**Target Audience:**
+- Individuals: People who want to track and control personal spending.
+- Budget-Conscious Users: People needing to look into a budget or understand spending patterns.
+- Young Individuals/Students: New to managing finances, seeking an easy-to-use tool.
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+## Wireframe
+The wireframes for PennyPilot provide a visual guide to the user interface and layout. They outline key pages, including the login, signup, dashboard, and expense management screens. Each wireframe illustrates the placement of essential elements, such as navigation menus, input fields, and buttons, ensuring a user-friendly experience. By mapping out the user journey and interaction flow, these wireframes serve as a foundation for the application's design and development, helping to visualize the overall user experience before implementation.
+<details>
+ <summary> LogIn / Sign Up Page </summary>
+ 
+![LoginPage-Wireframe](https://github.com/user-attachments/assets/b92c121c-734d-4076-a433-a839f02f8a6b)
 
-## Gitpod Reminders
+![SignUpPage - Wireframe](https://github.com/user-attachments/assets/d2e636b1-e9c9-4274-a218-25708e37421f)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+![LogIn+SignUp Page - Tablet - Wireframe](https://github.com/user-attachments/assets/c2693296-fbb5-4dfb-8a6a-d4878807b74c)
 
-`python3 -m http.server`
+</details>
+<details>
+<summary> Dashboard </summary>
+ 
+ ![DashBoard - Wireframe](https://github.com/user-attachments/assets/cfc55560-d327-45c5-b19a-f912e72fe221)
+ ![DashBoard - Tablet - Wireframe](https://github.com/user-attachments/assets/d629d2a5-197b-4c56-be58-5a675de288a5)
+</details>
+<details>
+<summary> Expense Page </summary>
+ 
+![Expense Page - Wireframe](https://github.com/user-attachments/assets/f3014c44-f033-47a2-89fa-16d885b49a3d)
+![Add Expense Page - Wireframe](https://github.com/user-attachments/assets/d4504e30-64a1-4df8-9421-d172f248f844)
+![Expense - Tablet - Wireframe](https://github.com/user-attachments/assets/92019a7e-4112-4661-ac6b-44706d6e8028)
+</details>
+<details>
+<summary> UserAccount </summary>
+ 
+![UserAccount - Wireframe](https://github.com/user-attachments/assets/f43045b8-3ef6-47e3-b55f-0f952ea4223f)
+![Update Password - Wireframe](https://github.com/user-attachments/assets/86b677f9-0188-446a-93e8-3d41ce503d7a)
+![Account - Tablet - Wireframe](https://github.com/user-attachments/assets/bb35d88d-e4ce-4eae-a54b-b5df62fe916f)
+</details>
 
-A blue button should appear to click: _Make Public_,
+<details>
+<summary> Side Navbar </summary>
+ 
+![Tablet - SideNav - Wireframe](https://github.com/user-attachments/assets/a4fa13e5-bcb4-4c83-b7d3-ed0a4481eac1)
+</details>
 
-Another blue button should appear to click: _Open Browser_.
+## Entity-Relationship Diagram 
+<details>
+ <summary> The Entity-Relationship (ER) diagram serves as a visual blueprint of the database structure, illustrating the relationships between different entities. 
+  The database structure for PennyPolit includes entities such as Users, Expense, Category, and Notifications, with defined relationships </summary>
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+![image](https://github.com/user-attachments/assets/cec62158-87b3-4586-bbbf-aaf8e27048c2)
+</details>
 
-A blue button should appear to click: _Make Public_,
+## User Stories
+User stories are used to help define the functionality from the user's perspective. Each story describes a feature or requirement straightforwardly, focusing on the user's needs and goals. 
 
-Another blue button should appear to click: _Open Browser_.
+1. As a new user, I want to create an account to securely track my expenses and access my data from any device.
+ 
+    **Acceptance Criteria:**
+   
+        - Users can sign up with an email and password.
+        - Users can log in with credentials.
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+3. As a user, I want to add my daily expenses easily so that I can keep track of my spending in real-time.
+   
+   **Acceptance Criteria:**
+   
+       - Users can enter the expense amount, category, date, and notes.
+       - Users can save the expense entry.
+       - The user receives confirmation that the expense has been added.
 
-To log into the Heroku toolbelt CLI:
+3. As a user, I want to categorize my expenses so that I can better understand where my money is going.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+   **Acceptance Criteria:**
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+       - Users can select from predefined categories or create custom categories.
+       - Users can view and edit categories.
 
-### Connecting your Mongo database
+3. As a user, I want to view a summary of my expenses by category and date range so that I can see where I’m spending the most.
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+    **Acceptance Criteria:**
+            
+       - Users can generate and view reports with graphs and charts.
+       - Users can filter the summary by category and date range.
 
-------
+4. As a user, I want to search for specific expenses by keyword so that I can easily find and review past entries.
+      **Acceptance Criteria**:
+   
+       - Users can enter a search term to find expenses.
+       - Search results display matching entries.
+5. As a user, I want to be able to edit or delete my expenses to correct mistakes or remove incorrect entries.
 
+     **Acceptance Criteria:**
+
+       - Users can edit expense details (amount, category, date, notes).
+       - Users can delete expenses.
+       - The user receives a confirmation of changes or deletions.
+6. As a user, I want to receive reminders to add my expenses so I don’t forget to track my spending regularly.
+
+   **Acceptance Criteria**:
+   
+       - Users can set up reminders for adding expenses.
+       - Users receive notifications according to their preferences.
+7. As a user, I want to securely log in and manage my account details so that my data is protected and I can keep my information up to date.
+
+   **Acceptance Criteria:**
+
+       - Users can log in and log out securely.
+       - Users can update their profile information and change their password.
+8. As a user, I want to filter my expenses by amount, category, and date range to analyze specific segments of my spending.
+
+   **Acceptance Criteria:**
+
+       - Users can apply filters to view expenses by amount, category, and date range.
+       - Filtered results are displayed accurately.
+## Scope
+- Users being able to create and log in with their accounts
+- Users adding in expenses and being able to see it updated on the expense sheet
+- Users can edit and delete existing expense
+
+## Colour Scheme/ Font-Family
+<details>
+ <summary> Colour Scheme </summary>
+1. Primary Colour: Blue (#007BFF) 
+
+ - A calm and trustworthy colour often which provides a professional feel while not being overwhelming.
+ 
+ ![image](https://github.com/user-attachments/assets/d28e3c3f-8093-4dd3-9ddd-3bda689f7e28)
+ 
+ 2. Accent Colors: Green (#28A745) Orange (#FFC107)
+
+- Green is often used for key elements like buttons for actions (e.g., 'Save' or 'Add Expense') and positive indicators (e.g., staying under budget), symbolizing successful transactions and financial stability.
+- Orange is an energetic colour commonly used to highlight important elements like warning messages, or key graphics, ensuring they stand out and capture user attention.
+  
+ ![image](https://github.com/user-attachments/assets/9f72808f-55c8-4085-90bb-ce1580776795)
+ ![image](https://github.com/user-attachments/assets/a9b0f52e-2c49-4057-9a2a-871eea6849b8)
+
+5. Neutral Background Colors: Light Gray (#F8F9FA) White (#FFFFFF)
+
+- Light Gray is ideal for large background areas such as the main content sections or sidebars, offering a soft contrast that helps key elements like text, buttons, and graphics stand out while keeping the layout open and modern.
+- White, commonly used for background areas like forms, cards, or key content sections, ensuring maximum clarity for text and interface elements, giving the design a clean and crisp appearance."
+   
+ ![image](https://github.com/user-attachments/assets/85bfbe86-5587-4070-b91c-f23c950a9b2f)
+ ![image](https://github.com/user-attachments/assets/4a2650fb-799e-47e2-973c-d754b3e876bb)
+
+8. Text Colors: Black (#000000) White (#FFFFFF)
+
+- Black will be used for headings or important text, creating a bold contrast to draw attention and emphasize key information or section titles.
+- White will be utilized to contrast with the button colours, enhancing readability and ensuring the button text stands out clearly.
+
+![image](https://github.com/user-attachments/assets/e9f7fc58-b1d2-4a24-81c1-be6b2fe4af20)
+![image](https://github.com/user-attachments/assets/4a2650fb-799e-47e2-973c-d754b3e876bb)
+</details>
+
+<details>
+ <summary> Font Selection from Google Fonts </summary>
+ 
+1. **[Montserrat](https://fonts.google.com/specimen/Montserrat)**: A contemporary, stylish sans-serif font with a strong impact, perfect for headings and titles. It delivers a bold, reliable, and professional appearance.  
+2. **[Roboto](https://fonts.google.com/specimen/Roboto)**: A clean and highly legible sans-serif font ideal for body text. Its widespread use in web applications attests to its readability and modern aesthetic.
+
+ 
+</details>
 ## Release History
 
 We continually tweak and adjust this template to help give you the best experience. Here is the version history:

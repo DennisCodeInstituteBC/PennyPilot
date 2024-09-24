@@ -1,0 +1,103 @@
+<!-- auth_app/templates/auth_app/login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .signup-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+        }
+
+        .signup-container h2 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        .signup-container label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .signup-container input {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .signup-container input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        .signup-container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .signup-container .login-link {
+            text-align: center;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .signup-container .login-link a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .signup-container .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form method="POST" action="{% url 'signup' %}">
+            {% csrf_token %}
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="first_name" required>
+            
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="last_name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="repassword">Re-enter Password</label>
+            <input type="password" id="repassword" name="repassword" required>
+
+            <input type="submit" value="Sign Up">
+        </form>
+        <div class="login-link">
+            Already have an account? <a href="{% url 'login' %}">Login</a>
+        </div>
+    </div>
+</body>
+</html>
+
