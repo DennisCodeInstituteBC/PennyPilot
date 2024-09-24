@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ["8000-denniscodein-pennypilot-5ri2dnzyl34.ws.codeinstitute-ide.net",
-                ".herokuapp.com"]
+                "pennypilot-ed4fcf68cb92.herokuapp.com"]
 
 # code to allow IDE and Heroku to pass CSRF Verification
 CSRF_TRUSTED_ORIGINS = ['https://*.codeinstitute-ide.net',
