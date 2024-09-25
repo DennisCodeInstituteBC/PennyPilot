@@ -18,6 +18,7 @@ def login_view(request):
     
     return render(request, 'login.html', {'form': form})
 
+
 def signup_view(request):
     return render(request, 'auth_app/signup.html')
 
