@@ -17,12 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.shortcuts import redirect 
-from dashboard_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("accounts/", include("allauth.urls")), #url for allAuth
-    path('accounts/dashboard/', views.profile, name="dashboard_app/"),  # Dashboard app
     # path('', lambda request: redirect('/auth/login/', permanent=False)), 
     #making the login page default when opening the browser
     # path('auth/', include('auth_app.urls')),  # Authentication app

@@ -49,10 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.sites', #installing allauth
     'allauth', #installing allauth
     'allauth.account', #installing allauth
-    'allauth.socialaccount', #installing allauth for socal accounts
-    'auth_app', 
+    'allauth.socialaccount', #installing allauth for socal accounts 
     'expense_app',
-    'dashboard_app',
 ]
 
 SITE_ID = 1
@@ -143,8 +141,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
-
-
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ] #letting django know where to look for static file
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
