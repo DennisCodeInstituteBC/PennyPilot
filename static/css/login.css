@@ -1,0 +1,85 @@
+/* Container holding the login page */
+.login-page-container {
+    display: flex;
+    height: 80%;
+    width: 70%;
+    background-color: #F8F9FA; /* Light Gray background for main content */
+    font-family: 'Roboto', sans-serif; /* Body text font */
+    border-radius: 25px;
+}
+
+/* Left side - image section */
+.image-section {
+    flex: 1;
+    background-color: #F8F9FA; /* Light Gray for subtle contrast */
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Right side - login form */
+.login-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #FFFFFF; /* White background for the form */
+}
+
+.login-container form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif; /* Font for headings */
+    color: #007BFF; /* Primary Blue */
+    text-align: center;
+}
+
+input[type="text"], input[type="password"] {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #28A745; /* Green for action buttons */
+    color: #FFFFFF; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+p {
+    text-align: center;
+    color: #000000; /* Black for general text */
+}
+
+p a {
+    color: #007BFF; /* Primary Blue for links */
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: #FFC107; /* Orange for warnings */
+    text-align: center;
+}

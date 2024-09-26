@@ -1,9 +1,181 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: green;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #F8F9FA; /* Light Gray for the background */
+    color: #000000; /* Default text color: Black */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif; /* Montserrat for headings */
+    color: #000000; /* Headings in Black */
+}
+
+/* Links */
+a {
+    color: #007BFF; /* Primary Blue for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+button, .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28A745; /* Green for action buttons */
+    color: #FFFFFF; /* White text on buttons */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #218838; /* Darker Green on hover */
+}
+
+button:disabled, .btn:disabled {
+    background-color: #6c757d; /* Disabled button color */
+    cursor: not-allowed;
+}
+
+/* Form Elements */
+input[type="text"], input[type="password"], input[type="email"], input[type="number"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #007BFF; /* Blue focus outline for form inputs */
+}
+
+/* Cards and Forms */
+.card, .form-container {
+    background-color: #FFFFFF; /* White background for cards and forms */
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Alerts */
+.alert-warning {
+    background-color: #FFC107; /* Orange for warning alerts */
+    color: #000000;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.alert-success {
+    background-color: #28A745; /* Green for success messages */
+    color: #FFFFFF;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007BFF; /* Blue for table headers */
+    color: #FFFFFF; /* White text for headers */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Light hover effect for table rows */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #007BFF; /* Blue for the navbar */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    color: #FFFFFF; /* White text for navbar links */
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    background-color: #0056b3; /* Darker Blue on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #F8F9FA; /* Light Gray for footer */
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eaeaea;
+}
+
+footer p {
+    margin: 0;
+    color: #6c757d; /* Muted text color */
+}
+
+/* Customizing layout */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    flex: 1;
+    padding: 10px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+
+    .card {
+        padding: 15px;
+    }
 }

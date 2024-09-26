@@ -3,24 +3,34 @@
 {% load i18n %}
 {% load account socialaccount %}
 
+{% block extra-css %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock extra-css %}
 
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
-    
+
 <body>
     {% block content %}
-    <div class="login-container">
-        <form method="POST" id="loginForm" action="{% url 'account_login' %}" onsubmit="return validateForm()">
-            {% csrf_token %}
-            <h1>PennyPilot</h1>
-            <input type="text" id="username" name="login" placeholder="Username or Email" required>
-            <input type="password" id="password" name="password" placeholder="Password" required>
-            {% if redirect_field_value %}
-            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
-            {% endif %}
-            <button type="submit">{% trans "Log In" %}</button>
-            <p>{% trans "Don't have an account?" %} <a href="{% url 'account_signup' %}">{% trans "Sign up" %}</a></p>
-            <p class="error" id="error-msg"></p>
-        </form>
+    <div class="login-page-container">
+        <!-- Left side with the image -->
+        <div class="image-section">
+            <img src="{% static 'images/piggybank.jpg' %}" alt="Login Image">
+        </div>
+        <!-- Right side with the login form -->
+        <div class="login-container">
+            <form method="POST" id="loginForm" action="{% url 'account_login' %}" onsubmit="return validateForm()">
+                {% csrf_token %}
+                <h1>PennyPilot</h1>
+                <input type="text" id="username" name="login" placeholder="Username or Email" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
+                {% endif %}
+                <button type="submit">{% trans "Log In" %}</button>
+                <p>{% trans "Don't have an account?" %} <a href="{% url 'account_signup' %}">{% trans "Sign up" %}</a></p>
+                <p class="error" id="error-msg"></p>
+            </form>
+        </div>
     </div>
     {% endblock %}
 </body>
