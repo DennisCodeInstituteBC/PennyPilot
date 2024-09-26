@@ -1,67 +1,71 @@
-{% extends "account/base.html" %}
-
+{% extends 'base.html' %}
+{% load static %}
 {% load i18n %}
+{% load account socialaccount %}
+
+{% block extra-css %}
+<link rel="stylesheet" href="{% static 'css/signup.css' %}">
+{% endblock extra-css %}
 
 {% block head_title %}{% trans "Sign Up" %}{% endblock head_title %}
 
 {% block content %}
-<div class="signup-container">
-    <h2>{% trans "Sign Up" %}</h2>
+<div class="signup-page-container">
+    <div class="signup-wrapper">
+        <!-- Left Image Container -->
+        <div class="signup-image">
+            <img src="{% static 'images/signup-image.jpg' %}" alt="Sign up image">
+        </div>
 
-    <form method="POST" action="{% url 'account_signup' %}" id="signupForm" onsubmit="return validatePassword()">
-        {% csrf_token %}
+        <!-- Right Form Container -->
+        <div class="signup-container">
+            <h2>{% trans "Sign Up" %}</h2>
 
-        <!-- First Name Field -->
-        <label for="fname">{% trans "First Name" %}</label>
-        <input type="text" id="fname" name="first_name" required>
-        
-        <!-- Last Name Field -->
-        <label for="lname">{% trans "Last Name" %}</label>
-        <input type="text" id="lname" name="last_name" required>
-        
-        <!-- Email Field -->
-        <label for="email">{% trans "Email" %}</label>
-        <input type="email" id="email" name="email" required>
-        
-        <!-- Password Field -->
-        <label for="password">{% trans "Password" %}</label>
-        <input type="password" id="password" name="password" required>
-        <small>{% trans "Password must be at least 8 characters long, contain letters and numbers." %}</small>
-        
-        <!-- Re-enter Password Field -->
-        <label for="repassword">{% trans "Re-enter Password" %}</label>
-        <input type="password" id="repassword" name="repassword" required>
-        
-        <!-- Password Mismatch Error Message -->
-        <p id="passwordError" class="error" style="display:none;">{% trans "Passwords do not match" %}</p>
+            <form method="POST" action="{% url 'account_signup' %}" id="signupForm" onsubmit="return validatePassword()">
+                {% csrf_token %}
+                
+                <label for="fname">{% trans "First Name" %}</label>
+                <input type="text" id="fname" name="first_name" required>
+                
+                <label for="lname">{% trans "Last Name" %}</label>
+                <input type="text" id="lname" name="last_name" required>
+                
+                <label for="email">{% trans "Email" %}</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">{% trans "Password" %}</label>
+                <input type="password" id="password" name="password" required>
+                <small>{% trans "Password must be at least 8 characters long, contain letters and numbers." %}</small>
+                
+                <label for="repassword">{% trans "Re-enter Password" %}</label>
+                <input type="password" id="repassword" name="repassword" required>
+                
+                <p id="passwordError" class="error" style="display:none;">{% trans "Passwords do not match" %}</p>
 
-        <!-- Submit Button -->
-        <input type="submit" value="{% trans 'Sign Up' %}">
-    </form>
+                <input type="submit" value="{% trans 'Sign Up' %}">
+            </form>
 
-    <div class="login-link">
-        {% trans "Already have an account?" %} <a href="{% url 'account_login' %}">{% trans "Login" %}</a>
+            <div class="login-link">
+                {% trans "Already have an account?" %} <a href="{% url 'account_login' %}">{% trans "Login" %}</a>
+            </div>
+        </div>
     </div>
 </div>
 
-<!-- JavaScript for Password Validation -->
 <script>
     function validatePassword() {
         const password = document.getElementById("password").value;
         const repassword = document.getElementById("repassword").value;
         const errorMsg = document.getElementById("passwordError");
 
-        // Clear previous errors
         errorMsg.style.display = "none";
 
-        // Password length validation
         if (password.length < 8) {
             errorMsg.textContent = "{% trans 'Password must be at least 8 characters long.' %}";
             errorMsg.style.display = "block";
             return false;
         }
 
-        // Password must contain letters and numbers
         const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
         if (!password.match(passwordRegex)) {
             errorMsg.textContent = "{% trans 'Password must contain both letters and numbers.' %}";
@@ -69,7 +73,6 @@
             return false;
         }
 
-        // Check if passwords match
         if (password !== repassword) {
             errorMsg.textContent = "{% trans 'Passwords do not match.' %}";
             errorMsg.style.display = "block";
@@ -79,5 +82,4 @@
         return true;
     }
 </script>
-
 {% endblock content %}
