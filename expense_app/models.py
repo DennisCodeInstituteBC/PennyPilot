@@ -4,9 +4,6 @@ from django.contrib.auth import get_user_model # importing users from allauth
 User = get_user_model()
 
 # Create your models here.
-
-
-
 # Category Model.py linked with Users from allauth
 class Category(models.Model):
     name = models.CharField(max_length=255)
@@ -17,7 +14,6 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
-
 
 # Expense Model.py linked with Users(allauth) and Catergory
 class Expense(models.Model):
