@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra-css %}
+<style>
+    body {
+        background-color: aqua;
+    }
+</style>
+{% endblock extra-css %}
+
+{% block title %}Dashboard{% endblock title %}
+
+{% block content %}
+<section class="container">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h2>PennyPilot</h2>
+        <a href="{% url 'dashboard' %}">Dashboard</a>
+        <a href="{% url 'expense' %}">Expense</a>
+        <a href="{% url 'account' %}">Account</a>
+        <a id="logout" href="{% url 'account_logout' %}">Logout</a>
+    </nav>
+    
+    <!-- Content Area -->
+    <article class="article">
+        <!-- Charts -->
+        <section class="graphs">
+            <div class="pie-chart">
+                <h2>Monthly Expense</h2>
+                <!-- Add your pie chart here (e.g., using a charting library) -->
+            </div>
+            <div class="progress-bar">
+                <h2>Monthly Budget</h2>
+                <!-- Add progress bar logic here -->
+            </div>
+        </section>
+        
+        <!-- Buttons -->
+        <section class="option-buttons">
+            <button class="add-expense-btn">Add Expense</button>
+            <button class="generate-report-btn">Generate Report</button>
+            <button class="search-btn">Search</button>
+        </section>
+        
+        <!-- Recent Expense Report -->
+        <section class="expense-table">
+            <h2>Recent Expenses</h2>
+            <!-- Display table of recent expenses here -->
+        </section>
+    </article>
+</section>
+{% endblock content %}

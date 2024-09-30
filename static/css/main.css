@@ -1,80 +1,16 @@
 /* General Styles */
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'Roboto' , sans-serif;
+    background-color: #F8F9FA;
+}
+
+/* Global Styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: rgba(0, 123, 255, 0.2); /* Light blue background */
-    color: #000000; /* Black text */
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif; /* Montserrat for headings */
-    color: #000000; /* Black text for headings */
+    font-family: 'Montserrat', sans-serif;
 }
 
-/* Links */
-a {
-    color: #007BFF; /* Primary Blue for links */
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Buttons */
-button, .btn {
-    background-color: #28A745; /* Green for action buttons */
-    color: #FFFFFF; /* White text on buttons */
-}
-
-button:hover, .btn:hover {
-    background-color: #218838; /* Darker Green on hover */
-}
-
-button:disabled, .btn:disabled {
-    background-color: #6c757d; /* Disabled button color */
-}
-
-/* Form Elements */
-input:focus, textarea:focus {
-    border-color: #007BFF; /* Blue focus outline for form inputs */
-}
-
-/* Cards and Forms */
-.card, .form-container {
-    background-color: #FFFFFF; /* White background for cards and forms */
-}
-
-/* Alerts */
-.alert-warning {
-    background-color: #FFC107; /* Orange for warning alerts */
-    color: #000000; /* Black text */
-}
-
-.alert-success {
-    background-color: #28A745; /* Green for success messages */
-    color: #FFFFFF; /* White text */
-}
-
-/* Tables */
-th {
-    background-color: #007BFF; /* Blue for table headers */
-    color: #FFFFFF; /* White text for headers */
-}
-
-/* Navbar */
-.navbar {
-    background-color: #007BFF; /* Blue for the navbar */
-}
-
-.navbar a {
-    color: #FFFFFF; /* White text for navbar links */
-}
-
-.navbar a:hover {
-    background-color: #0056b3; /* Darker Blue on hover */
-}
-
-/* Footer */
-footer {
-    background-color: #F8F9FA; /* Light Gray for footer */
-    color: #6c757d; /* Muted text color */
-}
