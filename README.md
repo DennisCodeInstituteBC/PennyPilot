@@ -167,7 +167,62 @@ User stories are used to help define the functionality from the user's perspecti
 
 ## Testing
 
-##Deployment
+## Deployment
+
+### Prepare the Environment and settings.py
+
+Create the env.py file:
+
+In your project root directory (e.g., /workspace/your_project), create an env.py file.
+
+Add your environment variables, such as the SECRET_KEY, and DATABASE_URL.
+
+```
+import os
+
+os.environ["SECRET_KEY"] = "your-secret-key"
+os.environ["DATABASE_URL"] = "your-database-url"
+```
+
+Update settings.py:
+
+Import your env.py file in settings.py:
+
+```
+import os
+if os.path.isfile("env.py"):
+    import env
+```
+Update the following parts in settings.py:
+
+Set the SECRET_KEY and DATABASE_URL from environment variables:
+
+```
+SECRET_KEY = os.getenv("SECRET_KEY")
+DATABASES = {
+    'default': dj_database_url.parse(os.getenv("DATABASE_URL"))
+}
+```
+
+### Steps to Deploy on Heroku:
+
+Install dependencies:
+
+```
+pip install -r requirements.txt
+```
+Create a Procfile with the following content:
+```
+web: gunicorn pennypilot.wsgi
+```
+Ensure the ALLOWED_HOSTS in your settings.py includes the Heroku domain:
+
+```
+ALLOWED_HOSTS = ['pennypilot-ed4fcf68cb92.herokuapp.com']
+```
+Open your Heroku app:
+---need to add more---
+
 
 ## Credits
 - [W3School](https://www.w3schools.com/)
