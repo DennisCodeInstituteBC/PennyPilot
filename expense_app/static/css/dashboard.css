@@ -19,9 +19,13 @@ h2 {
 }
 
 .navbar h2 {
+    display: flex;
     color: #fff;
     margin-bottom: 30px;
-    font-size: 24px;
+    font-size: 32px;
+    margin-top: 30px;
+    justify-content: center;
+
 }
 
 .navbar a {
