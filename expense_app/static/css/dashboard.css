@@ -1,46 +1,11 @@
-body{
-    color: #007BFF;
-}
-
-/* Container for Navbar and Main Content */
-.container {
-    display: flex; /* Use flexbox to align items side by side */
-}
-
-/* Navbar styles */
-.navbar {
-    background-color: #007BFF; /* Blue for the navbar */
-    padding: 10px 20px;
-    width: 250px; /* Set a fixed width for the navbar */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow for separation */
-}
-
-/* Main content styles */
-.article {
-    flex: 1; /* Take up remaining space */
-    padding: 20px; /* Add padding for better spacing */
-    background-color: #FFFFFF; /* White background for content area */
-}
-
-/* Example of the structure */
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
-/* Ensure the body takes full height */
-html, body {
-    height: 100%;
+*{
+    padding: 0;
     margin: 0;
+    background-color: #F8F9FA;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Navbar links styling */
-.navbar a {
-    color: #FFFFFF; /* White text for navbar links */
-    display: block; /* Make links block elements */
-    padding: 10px 20px; /* Add padding for better clickable area */
-    text-decoration: none; /* Remove underline */
-}
-
-.navbar a:hover {
-    background-color: #0056b3; /* Darker Blue on hover */
+.container{
+    justify-content: center;
 }

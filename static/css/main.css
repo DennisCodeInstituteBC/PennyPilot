@@ -3,14 +3,27 @@
     padding: 0;
     margin: 0;
     font-family:'Roboto' , sans-serif;
-    background-color: #F8F9FA;
 }
 
 /* Global Styles */
-body {
+
+.main-container{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #F8F9FA;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
 }
 
+footer{
+    background-color: #F8F9FA;
+    justify-content: center;
+    display: flex;
+    font-weight: 600;
+}

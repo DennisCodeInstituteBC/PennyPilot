@@ -4,8 +4,36 @@
 <!-- <link rel="stylesheet" href="%static 'css/dashboard.css' %"> -->
 {% endblock extra-css %}
 
+{% block title %}Account{% endblock title %}
+
 {% block content %}
-
-<h1>Account Page</h1>
-
+<section class="container">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h2>PennyPilot</h2>
+        <a href="{% url 'dashboard' %}">Dashboard</a>
+        <a href="{% url 'expense' %}">Expense</a>
+        <a href="{% url 'account' %}">Account</a>
+        <a id="logout" href="{% url 'account_logout' %}">Logout</a>
+    </nav>
+    
+    <!-- Content Area -->
+    <article class="article">
+        <div id="Page-Title">Account</div>
+        <div>
+            <img src="" alt="">
+            <button>Upload new Photo</button>
+            <h4>First Name 
+                <input type="text" placeholder="Username"> </h4>
+            <h4>Last Name 
+                <input type="text" placeholder="Lastname"></h4>
+            <h4>Email
+                <input type="text" placeholder="Email">
+            </h4>
+            <h4>Account ID
+                <input type="text" placeholder="AccountID">
+            </h4>
+        </div>
+    </article>
+</section>
 {% endblock content %}

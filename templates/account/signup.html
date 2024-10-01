@@ -4,7 +4,7 @@
 {% load account socialaccount %}
 
 {% block extra-css %}
-<!-- <link rel="stylesheet" href="{% static 'css/signup.css' %}"> -->
+<link rel="stylesheet" href="{% static 'css/signup.css' %}">
 {% endblock extra-css %}
 
 {% block head_title %}{% trans "Sign Up" %}{% endblock head_title %}
@@ -34,8 +34,9 @@
                 <input type="email" id="email" name="email" required>
                 
                 <label for="password">{% trans "Password" %}</label>
+                <p><small>{% trans "Password must be at least 8 characters long, contain letters and numbers." %}</small></p>
                 <input type="password" id="password" name="password" required>
-                <small>{% trans "Password must be at least 8 characters long, contain letters and numbers." %}</small>
+
                 
                 <label for="repassword">{% trans "Re-enter Password" %}</label>
                 <input type="password" id="repassword" name="repassword" required>

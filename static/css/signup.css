@@ -1,116 +1,127 @@
-/* General Styles */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: rgba(0, 123, 255, 0.2);
-    color: #000000;
-}
-
-h2 {
-    font-family: 'Montserrat', sans-serif;
-    color: #007BFF;
-    text-align: center;
-}
-
-/* Flexbox layout for form and image */
-.signup-wrapper {
+/* Signup Page Styling */
+.signup-page-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    min-height: 80vh;
+    background-color: #F8F9FA;
     padding: 20px;
-    gap: 20px;
 }
 
-/* Left Image Container */
-.signup-image img{
-    object-fit: cover;
-    width: 100vh;
-    height: auto;
-}
-
-/* Form Container */
-.signup-container {
-    width: 100%;
-    max-width: 500px;
+.signup-wrapper {
+    display: flex;
+    flex-wrap: wrap;
     background-color: #FFFFFF;
-    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 1200px;
 }
 
-/* Form Labels */
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
+.signup-image {
+    flex: 1;
+    display: none;
+    background-size: cover;
+    background-position: center;
 }
 
-input[type="text"], input[type="email"], input[type="password"] {
+.signup-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.signup-container {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.signup-container h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #007BFF;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.signup-container label {
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.signup-container input[type="text"],
+.signup-container input[type="email"],
+.signup-container input[type="password"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ced4da;
+    margin: 8px 0 20px 0;
+    border: 1px solid #cccccc;
     border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s;
 }
 
-input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+.signup-container input[type="text"]:focus,
+.signup-container input[type="email"]:focus,
+.signup-container input[type="password"]:focus {
+    border-color: #007BFF;
     outline: none;
-    border-color: #007BFF; /* Blue focus outline */
 }
 
-/* Error Message */
-.error {
-    color: #FF0000; /* Red for error messages */
-    font-size: 14px;
-    margin-top: -10px;
-    margin-bottom: 10px;
+.signup-container small {
+    color: #FFC107;
 }
 
-/* Submit Button */
-input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #28A745; /* Green button */
+.signup-container .error {
+    color: #FF0000;
+}
+
+.signup-container input[type="submit"] {
+    background-color: #28A745;
     color: #FFFFFF;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
-input[type="submit"]:hover {
-    background-color: #218838; /* Darker green on hover */
+.signup-container input[type="submit"]:hover {
+    background-color: #218838;
 }
 
-/* Login Link */
 .login-link {
-    text-align: center;
     margin-top: 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
 }
 
 .login-link a {
     color: #007BFF;
     text-decoration: none;
-    font-weight: 750;
 }
 
 .login-link a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .signup-wrapper {
-        flex-direction: column;
+/* Responsive Styling */
+@media (min-width: 768px) {
+    .signup-image {
+        display: block;
+        flex: 1;
     }
 
-    .signup-image img {
-        width: 100%;
-        margin-bottom: 20px;
+    .signup-container {
+        flex: 1;
     }
 }

@@ -4,8 +4,27 @@
 <!-- <link rel="stylesheet" href="%static 'css/dashboard.css' %"> -->
 {% endblock extra-css %}
 
+{% block title %}Expense{% endblock title %}
+
 {% block content %}
 
 <h1>Expense Page</h1>
-
+<section class="container"></section>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h2>PennyPilot</h2>
+        <a href="{% url 'dashboard' %}">Dashboard</a>
+        <a href="{% url 'expense' %}">Expense</a>
+        <a href="{% url 'account' %}">Account</a>
+        <a id="logout" href="{% url 'account_logout' %}">Logout</a>
+    </nav>
+    
+    <!-- Content Area -->
+    <article class="article">
+       <h1>Expense Table</h1>
+       <button>Add Expense</button>
+       <button>Search</button>
+       <button>Generate Report</button>
+    </article>
+</section>
 {% endblock content %}
