@@ -1,11 +1,163 @@
-*{
-    padding: 0;
-    margin: 0;
-    background-color: #F8F9FA;
-    justify-content: center;
-    align-items: center;
+/* General styles */
+h2 {
+    color: #007BFF;
 }
 
-.container{
+/* Sidebar Navbar styles */
+.navbar {
+    width: 200px;
+    height: 100vh;
+    background-color: #007BFF;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 0 10px 10px 0;
+}
+
+.navbar h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    border-radius: 15px;
+    height: 40px;
+}
+
+.navbar a:hover {
+    font-weight: bold;
+    background-color: #fff;
+    color: #007BFF;
+}
+
+#logout {
+    background-color: #28A745; 
+    border-radius: 5px;
+    margin-top: auto;
+    height:40px;
+    margin-top: 65vh;
+}
+
+#logout:hover {
+    background-color: #218838;
+    color: #fff;
+}
+
+/* Content area styles */
+.container {
+    margin-left: 220px; 
+    padding: 20px;
+}
+
+.article {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 1200px;
+    height: fit-content;
+}
+
+/* Graph and chart section */
+.graphs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 40px;
+}
+
+.pie-chart, .progress-bar {
+    width: 48%;
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.pie-chart h2, .progress-bar h2 {
+    margin-bottom: 20px;
+}
+
+/* Button styles */
+.option-buttons {
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-around ;
+}
+
+.option-buttons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 280px;
+    height: 50px;
+    
+}
+
+.add-expense-btn,
+.generate-report-btn,
+.search-btn{
+    background-color: #007BFF;
+    color: white;
+}
+
+.add-expense-btn:hover ,
+.generate-report-btn:hover,
+.search-btn:hover 
+{
+    background-color: #0056b3;
+}
+
+
+/* Recent Expenses section */
+.expense-table {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.expense-table h2 {
+    margin-bottom: 15px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .container {
+        margin-left: 0;
+    }
+
+    .navbar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        border-radius: 0;
+    }
+
+    .graphs {
+        flex-direction: column;
+    }
+
+    .pie-chart, .progress-bar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
