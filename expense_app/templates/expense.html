@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block extra-css %}
-<!-- <link rel="stylesheet" href="%static 'css/dashboard.css' %"> -->
+<link rel="stylesheet" href="{% static 'css/expense.css' %}">
 {% endblock extra-css %}
 
 {% block title %}Expense{% endblock title %}
 
 {% block content %}
 
-<h1>Expense Page</h1>
-<section class="container"></section>
+<section class="container">
     <!-- Navbar -->
     <nav class="navbar">
         <h2>PennyPilot</h2>
@@ -18,13 +18,48 @@
         <a href="{% url 'account' %}">Account</a>
         <a id="logout" href="{% url 'account_logout' %}">Logout</a>
     </nav>
-    
+
     <!-- Content Area -->
     <article class="article">
-       <h1>Expense Table</h1>
-       <button>Add Expense</button>
-       <button>Search</button>
-       <button>Generate Report</button>
+        <div id="Page-Title">Expense Table</div>
+        <div class="expense-options">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <button type="submit">Add Expense</button>
+                <button type="button">Search</button>
+                <button type="button">Generate Report</button>
+            </form>
+        </div>
+
+        <!-- Dynamic Expense Table Placeholder -->
+        <div class="expense-table">
+            <!-- Assuming you will dynamically load the expense table here -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Category</th>
+                        <th>Amount</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example of a dynamic row (Replace with actual dynamic content) -->
+                    {% for expense in expenses %}
+                    <tr>
+                        <td>{{ expense.date }}</td>
+                        <td>{{ expense.category.name }}</td>
+                        <td>{{ expense.amount }}</td>
+                        <td>{{ expense.notes }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="4">No expenses available</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
     </article>
 </section>
 {% endblock content %}

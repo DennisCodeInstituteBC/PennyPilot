@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block extra-css %}
-<!-- <link rel="stylesheet" href="%static 'css/dashboard.css' %"> -->
+<link rel="stylesheet" href="{% static 'css/account.css' %}">
 {% endblock extra-css %}
 
 {% block title %}Account{% endblock title %}
@@ -21,18 +22,36 @@
     <article class="article">
         <div id="Page-Title">Account</div>
         <div>
-            <img src="" alt="">
-            <button>Upload new Photo</button>
-            <h4>First Name 
-                <input type="text" placeholder="Username"> </h4>
-            <h4>Last Name 
-                <input type="text" placeholder="Lastname"></h4>
-            <h4>Email
-                <input type="text" placeholder="Email">
-            </h4>
-            <h4>Account ID
-                <input type="text" placeholder="AccountID">
-            </h4>
+            <div class="profile-img">
+            <img src="{% static 'images/default-profile.png' %}" alt="Profile Image">
+            <button type="submit">Upload new Photo</button>
+            </div>
+            
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                <h4>First Name 
+                    <input type="text" name="first_name" value="{{ user.first_name }}" placeholder="First Name" required> 
+                </h4>
+                
+                <h4>Last Name 
+                    <input type="text" name="last_name" value="{{ user.last_name }}" placeholder="Last Name" required>
+                </h4>
+                
+                <h4>Email
+                    <input type="email" name="email" value="{{ user.email }}" placeholder="Email" required>
+                </h4>
+                
+                <h4>Account ID
+                    <input type="text" value="{{ user.id }}" placeholder="Account ID" readonly>
+                </h4>
+                
+                <div class="buttons">
+
+                    <button class="Update-password">Update Password</button>
+                    <button type="submit">Save Changes</button>
+                </div>
+            </form>
         </div>
     </article>
 </section>
