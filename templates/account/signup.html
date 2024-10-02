@@ -27,7 +27,7 @@
                 {% if redirect_field_value %}
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
-                <button type="submit">{% trans "Sign Up" %} &raquo;</button>
+                <button class= "signup" type="submit">{% trans "Sign Up" %} &raquo;</button>
               </form>
 
             <div class="login-link">
@@ -37,34 +37,4 @@
     </div>
 </div>
 
-<script>
-    function validatePassword() {
-        const password = document.getElementById("password").value;
-        const repassword = document.getElementById("repassword").value;
-        const errorMsg = document.getElementById("passwordError");
-
-        errorMsg.style.display = "none";
-
-        if (password.length < 8) {
-            errorMsg.textContent = "{% trans 'Password must be at least 8 characters long.' %}";
-            errorMsg.style.display = "block";
-            return false;
-        }
-
-        const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-        if (!password.match(passwordRegex)) {
-            errorMsg.textContent = "{% trans 'Password must contain both letters and numbers.' %}";
-            errorMsg.style.display = "block";
-            return false;
-        }
-
-        if (password !== repassword) {
-            errorMsg.textContent = "{% trans 'Passwords do not match.' %}";
-            errorMsg.style.display = "block";
-            return false;
-        }
-
-        return true;
-    }
-</script>
 {% endblock content %}

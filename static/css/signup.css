@@ -82,7 +82,7 @@
     color: #FF0000;
 }
 
-.signup-container input[type="submit"] {
+button.signup{
     background-color: #28A745;
     color: #FFFFFF;
     padding: 10px 20px;
@@ -94,7 +94,7 @@
     transition: background-color 0.3s;
 }
 
-.signup-container input[type="submit"]:hover {
+button.signup:hover {
     background-color: #218838;
 }
 
