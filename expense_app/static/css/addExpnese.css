@@ -1,0 +1,114 @@
+/* Container for the entire page */
+.expense-page-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #F8F9FA; /* Light gray background */
+}
+
+/* Wrapper for the content area */
+.expense-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+/* Content container for the form and page content */
+.content-container {
+    flex: 1;
+    padding: 40px;
+}
+
+/* Form container */
+.article {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 900px;
+    margin: 0 auto;
+}
+
+/* Headings */
+.article h1 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 30px;
+    color: #000000; /* Black for headings */
+}
+
+/* Form styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+    color: #333; /* Darker text */
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9; /* Light background for input fields */
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* Button styling */
+.submit-btn {
+    background-color: #28A745; /* Green for submit */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.cancel-btn {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cancel-btn:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .expense-wrapper {
+        flex-direction: column;
+    }
+
+    .navbar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .content-container {
+        padding: 20px;
+    }
+
+    .article {
+        padding: 20px;
+    }
+}

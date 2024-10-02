@@ -59,10 +59,10 @@ h2 {
 }
 
 .add-expense-btn,
-.generate-report-btn,
 .search-btn{
-    background-color: #007BFF;
+    background-color: green;
     color: white;
+    font-weight: bold;
 }
 
 .add-expense-btn:hover ,

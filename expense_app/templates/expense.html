@@ -5,64 +5,57 @@
 <link rel="stylesheet" href="{% static 'css/expense.css' %}">
 {% endblock extra-css %}
 
-{% block title %}Expense{% endblock title %}
+{% block title %}Expenses{% endblock title %}
 
 {% block content %}
-<div class="expense-page-container">
-    <div class="expense-wrapper">
-        <!-- Sidebar Navbar -->
-        <nav class="sidebar-navbar">
-            <h2 class="logo">PennyPilot</h2>
-            <ul>
-                <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
-                <li><a href="{% url 'expense' %}" class="active">Expense</a></li>
-                <li><a href="{% url 'account' %}">Account</a></li>
-                <li><a id="logout" href="{% url 'account_logout' %}">Logout</a></li>
-            </ul>
-        </nav>
+<section class="container">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h2>PennyPilot</h2>
+        <a href="{% url 'dashboard' %}">Dashboard</a>
+        <a href="{% url 'expense' %}">Expense</a>
+        <a href="{% url 'account' %}">Account</a>
+        <a id="logout" href="{% url 'account_logout' %}">Logout</a>
+    </nav>
+    
+    <!-- Content Area -->
+    <article class="article">
+        <div id="Page-Title">Your Expenses</div>
         
-        <!-- Content Area -->
-        <div class="content-container">
-            <article class="article">
-                <h1>Expense Table</h1>
-                <!-- Buttons for actions -->
-                <section class="option-buttons">
-                    <a href="{% url 'add_expense_page' %}" class="add-expense-btn">Add Expense</a>
-                    <button class="generate-report-btn">Generate Report</button>
-                    <button class="search-btn">Search</button>
-                </section>
-                
-                <!-- Expense Table -->
-                <section class="expense-table">
-                    <h2>Recent Expenses</h2>
-                    <table id="expense-table">
-                        <thead>
-                            <tr>
-                                <th>Category</th>
-                                <th>Amount</th>
-                                <th>Date</th>
-                                <th>Notes</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for expense in expenses %}
-                            <tr>
-                                <td>{{ expense.category.name }}</td>
-                                <td>{{ expense.amount }}</td>
-                                <td>{{ expense.date }}</td>
-                                <td>{{ expense.notes }}</td>
-                                <td>
-                                    <a href="{% url 'edit_expense_page' expense.id %}" class="edit-btn">Edit</a>
-                                    <a href="{% url 'delete_expense' expense.id %}" class="delete-btn">Delete</a>
-                                </td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                </section>
-            </article>
-        </div>
-    </div>
-</div>
+        <!-- Add New Expense Button -->
+        <section class="option-buttons">
+            <a href="{% url 'add_expense' %}" class="add-expense-btn">Add New Expense</a>
+        </section>
+
+        <!-- Expense Table -->
+        <section class="expense-table">
+            <h2>Expense List</h2>
+            <table border="1" id="expense-table">
+                <thead>
+                    <tr>
+                        <th>Amount</th>
+                        <th>Date</th>
+                        <th>Notes</th>
+                        <th>Category</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for expense in expenses %}
+                    <tr>
+                        <td>{{ expense.amount }}</td>
+                        <td>{{ expense.date }}</td>
+                        <td>{{ expense.notes }}</td>
+                        <td>{{ expense.category }}</td>
+                        <td>
+                            <a href="{% url 'edit_expense' expense.id %}" class="edit-btn">Edit</a>
+                            <a href="{% url 'delete_expense' expense.id %}" class="delete-btn">Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+    </article>
+</section>
 {% endblock content %}
