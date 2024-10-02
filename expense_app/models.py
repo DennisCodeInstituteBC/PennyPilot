@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model # importing users from allauth
+from django.contrib.auth.models import User 
 
 User = get_user_model()
 
@@ -17,8 +18,7 @@ class Category(models.Model):
         return self.name
 
 # Expense Model.py linked with Users(allauth) and Catergory
-from django.db import models
-from django.contrib.auth.models import User  # assuming you are using Django's User model
+
 
 class Expense(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)

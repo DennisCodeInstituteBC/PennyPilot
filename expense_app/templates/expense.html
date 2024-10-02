@@ -20,17 +20,15 @@
     
     <!-- Content Area -->
     <article class="article">
-        <div id="Page-Title">Your Expenses</div>
+        <div id="Page-Title">Expense List</div>
         
         <!-- Add New Expense Button -->
-        <section class="option-buttons">
-            <a href="{% url 'add_expense' %}" class="add-expense-btn">Add New Expense</a>
+        <section class="expense-options">
+            <button><a href="{% url 'add_expense' %}" class="add-expense-btn">Add New Expense</a></button>
         </section>
-
         <!-- Expense Table -->
         <section class="expense-table">
-            <h2>Expense List</h2>
-            <table border="1" id="expense-table">
+            <table id="expense-table">
                 <thead>
                     <tr>
                         <th>Amount</th>
@@ -49,7 +47,7 @@
                         <td>{{ expense.category }}</td>
                         <td>
                             <a href="{% url 'edit_expense' expense.id %}" class="edit-btn">Edit</a>
-                            <a href="{% url 'delete_expense' expense.id %}" class="delete-btn">Delete</a>
+                            <a href="#" class="delete-btn">Delete</a>
                         </td>
                     </tr>
                     {% endfor %}

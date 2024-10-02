@@ -22,8 +22,10 @@ def add_expense(request):
     if request.method == "POST":
         form = ExpenseForm(request.POST)
         if form.is_valid():
-            form.save()  # Save the expense without linking to a user
-            return redirect('expense_view')  # Redirect to the expense page
+            expense = form.save(commit=False)
+            expense.user = request.user
+            expense.save()  # Save the expense without linking to a user
+            return redirect('expense') 
     else:
         form = ExpenseForm()
 
@@ -36,7 +38,7 @@ def edit_expense(request, expense_id):
         form = ExpenseForm(request.POST, instance=expense)
         if form.is_valid():
             form.save()  # Update the expense
-            return redirect('expense_view')  # Redirect to the expense page
+            return redirect('expense_view')
     else:
         form = ExpenseForm(instance=expense)
 
