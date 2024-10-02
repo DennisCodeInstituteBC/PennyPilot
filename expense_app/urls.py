@@ -8,10 +8,10 @@ urlpatterns = [
     path('dashboard/', views.dashboard_view, name='dashboard'),
 
     # Expense
-    path('expense/', views.expense_view, name='expense'),
+    path('expense/', expense_view, name='expense_view'),
     path('expense/add/', add_expense, name='add_expense'),
     path('expense/edit/<int:expense_id>/', edit_expense, name='edit_expense'),
-    # path('expense/delete/<int:id>/', views.delete_expense, name='delete_expense'),
+     path('expense/delete/<int:id>/', views.delete_expense, name='delete_expense'),
 
 
     # Account

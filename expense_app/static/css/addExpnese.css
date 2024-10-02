@@ -35,6 +35,20 @@
     color: #000000; /* Black for headings */
 }
 
+.article h2 {
+    font-family: 'Montserrat', sans-serif; /* Heading font */
+    color: #007BFF; /* Primary color for headings */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+/* Expense Details */
+.expense-details {
+    background-color: #E9F7EF; /* Light green background for details */
+    padding: 15px; /* Padding around details */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below details */
+}
+
 /* Form styling */
 .form-group {
     margin-bottom: 20px;
@@ -64,7 +78,8 @@ textarea {
 }
 
 /* Button styling */
-.submit-btn {
+.submit-btn,
+.btn-primary {
     background-color: #28A745; /* Green for submit */
     color: white;
     padding: 10px 20px;
@@ -76,19 +91,22 @@ textarea {
     transition: background 0.3s ease;
 }
 
-.submit-btn:hover {
+.submit-btn:hover,
+.btn-primary:hover {
     background-color: #218838; /* Darker green on hover */
 }
 
-.cancel-btn {
+.cancel-btn,
+.btn-secondary {
     display: inline-block;
     margin-top: 20px;
-    color: #007BFF;
+    color: #007BFF; /* Primary color */
     text-decoration: none;
     font-weight: bold;
 }
 
-.cancel-btn:hover {
+.cancel-btn:hover,
+.btn-secondary:hover {
     text-decoration: underline;
 }
 
