@@ -27,7 +27,7 @@ def add_expense(request):
             expense = form.save(commit=False)
             expense.user = request.user
             expense.save()  # Save the expense without linking to a user
-            return redirect('expense') 
+            return redirect('expense_view') 
     else:
         form = ExpenseForm()
 

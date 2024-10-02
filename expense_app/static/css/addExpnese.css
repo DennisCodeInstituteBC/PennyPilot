@@ -56,7 +56,6 @@
 
 .form-group label {
     display: block;
-    font-family: 'Roboto', sans-serif;
     margin-bottom: 10px;
     color: #333; /* Darker text */
 }
@@ -86,9 +85,7 @@ textarea {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    transition: background 0.3s ease;
 }
 
 .submit-btn:hover,
@@ -108,6 +105,43 @@ textarea {
 .cancel-btn:hover,
 .btn-secondary:hover {
     text-decoration: underline;
+}
+
+/* delete expense */
+
+#deletion-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    display: inline block;
+    padding: 10px 40px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Red for danger */
+    color: white;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Gray for secondary */
+    color: white;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268; /* Darker gray on hover */
 }
 
 /* Responsive design for mobile */

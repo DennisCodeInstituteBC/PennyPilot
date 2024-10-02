@@ -28,7 +28,7 @@
                     <form method="POST"
                     class="form-group">
                         {% csrf_token %}
-                        {{ form.as_p }} <!-- Render form fields in a paragraph structure -->
+                        {{ form.as_p }} 
                         <button type="submit" class="btn btn-primary">Save Changes</button>
                         <a href="{% url 'expense_view' %}" class="btn btn-secondary">Cancel</a>
                     </form>
