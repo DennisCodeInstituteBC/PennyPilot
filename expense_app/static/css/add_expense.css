@@ -1,0 +1,61 @@
+.add-edit-expense-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.form-wrapper {
+    background-color: white;
+    padding: 40px;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-wrapper h2 {
+    color: #007BFF;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-wrapper label {
+    display: block;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-wrapper input,
+.form-wrapper select,
+.form-wrapper textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #DDD;
+}
+
+.form-wrapper button {
+    margin-top: 20px;
+    background-color: #28A745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-wrapper button:hover {
+    background-color: #218838;
+}
+
+.back-link a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
