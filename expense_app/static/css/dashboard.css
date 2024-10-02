@@ -58,6 +58,11 @@ h2 {
     
 }
 
+.expense-options a{
+    text-decoration: none;
+    color: #fff;
+}
+
 .add-expense-btn,
 .search-btn{
     background-color: green;
