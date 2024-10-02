@@ -71,6 +71,33 @@
     color: #333; 
 }
 
+.expense-table td a{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.edit-btn{
+    background-color: #218838;
+}
+
+.edit-btn:hover{
+    background-color: #1a5226;
+}
+
+.delete-btn{
+    background-color: #dc3545;
+}
+
+.delete-btn:hover {
+    background-color: #bd2130;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {

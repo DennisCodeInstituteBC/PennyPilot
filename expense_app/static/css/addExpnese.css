@@ -125,23 +125,23 @@ textarea {
 }
 
 .btn-danger {
-    background-color: #dc3545; /* Red for danger */
+    background-color: #dc3545; 
     color: white;
     border: none;
 }
 
 .btn-danger:hover {
-    background-color: #c82333; /* Darker red on hover */
+    background-color: #dc3545;
 }
 
 .btn-secondary {
-    background-color: #6c757d; /* Gray for secondary */
+    background-color: #6c757d;
     color: white;
     border: none;
 }
 
 .btn-secondary:hover {
-    background-color: #5a6268; /* Darker gray on hover */
+    background-color: #5a6268;
 }
 
 /* Responsive design for mobile */
