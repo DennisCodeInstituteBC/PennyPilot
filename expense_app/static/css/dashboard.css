@@ -94,7 +94,7 @@ h2 {
     }
 
     .article {
-        width: 100%; 
+        margin-top: 40px;
         width: fit-content;
     }
 
@@ -103,16 +103,16 @@ h2 {
     }
 
     .pie-chart, .progress-bar {
-        width: 100%; /* Full width for each chart */
+        width: fit-content;
         margin-bottom: 20px;
     }
 
     .option-buttons {
+        width: 100%;
         flex-direction: column;
     }
 
     .option-buttons button {
-        width: 100%; /* Full width buttons */
         margin-bottom: 10px;
     }
 

@@ -147,6 +147,7 @@ textarea {
     .article,
     .form-group{
         max-width: fit-content;
+        width: fit-content;
     }
     
     .form-group,
