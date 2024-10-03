@@ -114,6 +114,11 @@ button.signup:hover {
     text-decoration: underline;
 }
 
+.signup ul{
+    margin-bottom: 20px;
+}
+
+
 /* Responsive Styling */
 @media (min-width: 768px) {
     .signup-image {

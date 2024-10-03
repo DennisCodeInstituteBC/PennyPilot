@@ -107,3 +107,52 @@ p a:hover {
     color: #FFC107;
     text-align: center;
 }
+
+ul{
+    margin-bottom: 20px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+    /* Tablet view */
+    .login-page-container {
+        width: 90%;
+        height: auto;
+    }
+    
+    .image-section {
+        display: none; /* Hide image section on tablets */
+    }
+
+    .login-container {
+        border-radius: 25px;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile view */
+    .login-page-container {
+        width: 100%;
+        margin: 0;
+    }
+
+    .login-container {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input[type="text"], input[type="password"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 8px;
+    }
+}

@@ -10,7 +10,16 @@ from django.shortcuts import get_object_or_404, redirect
 
 # Dashboard
 def dashboard_view(request):
-    return render(request, 'dashboard.html')
+    expenses = Expense.objects.all()  # Get all expenses
+    categories = [expense.category.name for expense in expenses]  # Get expense categories
+    amounts = [expense.amount for expense in expenses]  # Get expense amounts
+    
+    context = {
+        'categories': categories,
+        'amounts': amounts,
+    }
+    
+    return render(request, 'dashboard.html', context)
 
 # Expense table view
 

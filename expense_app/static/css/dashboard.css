@@ -43,7 +43,7 @@ h2 {
     text-align: center;
     margin-bottom: 30px;
     display: flex;
-    justify-content: space-around ;
+    justify-content: space-around;
 }
 
 .option-buttons button {
@@ -55,28 +55,25 @@ h2 {
     cursor: pointer;
     width: 280px;
     height: 50px;
-    
 }
 
-.expense-options a{
+.expense-options a {
     text-decoration: none;
     color: #fff;
 }
 
 .add-expense-btn,
-.search-btn{
+.search-btn {
     background-color: green;
     color: white;
     font-weight: bold;
 }
 
-.add-expense-btn:hover ,
+.add-expense-btn:hover,
 .generate-report-btn:hover,
-.search-btn:hover 
-{
+.search-btn:hover {
     background-color: #0056b3;
 }
-
 
 /* Recent Expenses section */
 .expense-table {
@@ -89,19 +86,16 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* Responsive layout */
+/* Responsive layout for mobile and tablet view */
 @media (max-width: 768px) {
     .container {
         margin-left: 0;
+        padding: 10px;
     }
 
-    .navbar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        justify-content: space-around;
-        border-radius: 0;
+    .article {
+        width: 100%; 
+        width: fit-content;
     }
 
     .graphs {
@@ -109,7 +103,20 @@ h2 {
     }
 
     .pie-chart, .progress-bar {
-        width: 100%;
+        width: 100%; /* Full width for each chart */
         margin-bottom: 20px;
+    }
+
+    .option-buttons {
+        flex-direction: column;
+    }
+
+    .option-buttons button {
+        width: 100%; /* Full width buttons */
+        margin-bottom: 10px;
+    }
+
+    .expense-table {
+        padding: 10px;
     }
 }

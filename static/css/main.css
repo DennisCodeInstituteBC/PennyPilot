@@ -10,8 +10,7 @@
 .main-container{
     display: flex;
     justify-content: center; 
-    align-items: center;
-    height: 100vh;
+    align-items: center;;
     margin: 0 auto;
     padding: 20px;
     background-color: #F8F9FA;
@@ -19,13 +18,6 @@
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
-}
-
-footer{
-    background-color: #F8F9FA;
-    justify-content: center;
-    display: flex;
-    font-weight: 600;
 }
 
 /* nav bar */
@@ -92,4 +84,50 @@ footer{
     color: #007BFF;
     margin-bottom: 30px;
     font-weight: bold;
+}
+
+/* footer */
+
+footer {
+    background-color: #808080;
+    text-align: center;
+    padding: 1rem 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .navbar {
+        height: 8vh;
+        padding: 7px;
+        flex-direction: row;
+        width: 360px;
+    }
+
+    .navbar h2 {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        font-size: 16px;
+    }
+
+    .navbar a {
+        margin: 10px;
+        font-size: 10px;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        height: 40px;
+
+    }
+    #logout{
+        margin: 10px 20px 0 0;
+    }
 }
