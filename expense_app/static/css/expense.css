@@ -109,8 +109,12 @@
     }
 
     #Page-Title {
-    margin-top: 40px;
+    margin:10px;
     font-size: 22px;
+    }
+
+    .expense-options{
+        margin: 0;
     }
 
     .expense-options button {

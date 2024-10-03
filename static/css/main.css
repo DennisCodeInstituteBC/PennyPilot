@@ -106,7 +106,7 @@ footer {
         height: 8vh;
         padding: 7px;
         flex-direction: row;
-        width: 360px;
+        width: 380px;
     }
 
     .navbar h2 {
@@ -130,4 +130,5 @@ footer {
     #logout{
         margin: 10px 20px 0 0;
     }
+
 }

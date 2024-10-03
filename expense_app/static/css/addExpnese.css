@@ -1,23 +1,19 @@
-/* Container for the entire page */
 .expense-page-container {
     display: flex;
     min-height: 100vh;
-    background-color: #F8F9FA; /* Light gray background */
+    background-color: #F8F9FA; 
 }
 
-/* Wrapper for the content area */
 .expense-wrapper {
     display: flex;
     width: 100%;
 }
 
-/* Content container for the form and page content */
 .content-container {
     flex: 1;
     padding: 40px;
 }
 
-/* Form container */
 .article {
     background-color: white;
     padding: 40px;
@@ -30,23 +26,21 @@
 
 /* Headings */
 .article h1 {
-    font-family: 'Montserrat', sans-serif;
     margin-bottom: 30px;
-    color: #000000; /* Black for headings */
+    color: #000000;
 }
 
 .article h2 {
-    font-family: 'Montserrat', sans-serif; /* Heading font */
-    color: #007BFF; /* Primary color for headings */
-    margin-bottom: 20px; /* Space below heading */
+    color: #007BFF;
+    margin-bottom: 20px; 
 }
 
 /* Expense Details */
 .expense-details {
-    background-color: #E9F7EF; /* Light green background for details */
-    padding: 15px; /* Padding around details */
-    border-radius: 5px; /* Rounded corners */
-    margin-bottom: 20px; /* Space below details */
+    background-color: #E9F7EF;
+    padding: 15px; 
+    border-radius: 5px; 
+    margin-bottom: 20px; 
 }
 
 /* Form styling */
@@ -57,7 +51,7 @@
 .form-group label {
     display: block;
     margin-bottom: 10px;
-    color: #333; /* Darker text */
+    color: #333;
 }
 
 .form-group input,
@@ -68,7 +62,7 @@
     font-size: 16px;
     border-radius: 8px;
     border: 1px solid #ccc;
-    background-color: #f9f9f9; /* Light background for input fields */
+    background-color: #f9f9f9;
 }
 
 textarea {
@@ -79,7 +73,7 @@ textarea {
 /* Button styling */
 .submit-btn,
 .btn-primary {
-    background-color: #28A745; /* Green for submit */
+    background-color: #28A745; 
     color: white;
     padding: 10px 20px;
     border: none;
@@ -90,14 +84,14 @@ textarea {
 
 .submit-btn:hover,
 .btn-primary:hover {
-    background-color: #218838; /* Darker green on hover */
+    background-color: #218838; 
 }
 
 .cancel-btn,
 .btn-secondary {
     display: inline-block;
     margin-top: 20px;
-    color: #007BFF; /* Primary color */
+    color: #007BFF; 
     text-decoration: none;
     font-weight: bold;
 }
@@ -150,17 +144,20 @@ textarea {
         flex-direction: column;
     }
 
-    .navbar {
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
     .content-container {
         padding: 20px;
     }
 
-    .article {
-        padding: 20px;
+    .article,
+    .form-group{
+        max-width: fit-content;
     }
+    
+    .form-group,
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 14px;
+}
+
 }
