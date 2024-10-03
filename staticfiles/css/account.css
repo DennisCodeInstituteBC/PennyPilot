@@ -1,0 +1,79 @@
+/* General Styles */
+/* General styles */
+h2 {
+    color: #007BFF;
+}
+
+.article {
+    flex-grow: 1;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    margin: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 1000px;
+}
+
+/* Page Title */
+.profile-img{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+/* Account Section */
+.article h4 {
+    margin-top: 20px;
+    color: #333333;
+    font-size: 18px;
+}
+
+.article input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #CED4DA;
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    background-color: #F8F9FA;
+}
+
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+}
+
+/* Upload Photo Button */
+.article button {
+    background-color: #28A745; /* Green for action buttons */
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.article button:hover {
+    background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .navbar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .article {
+        margin: 20px;
+    }
+}
