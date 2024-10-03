@@ -25,14 +25,10 @@
 }
 
 /* Headings */
-.article h1 {
+.article h1,
+.article h2 {
     margin-bottom: 30px;
     color: #000000;
-}
-
-.article h2 {
-    color: #007BFF;
-    margin-bottom: 20px; 
 }
 
 /* Expense Details */
@@ -158,6 +154,6 @@ textarea {
     .form-group select,
     .form-group textarea {
         font-size: 14px;
-}
+    }
 
 }
