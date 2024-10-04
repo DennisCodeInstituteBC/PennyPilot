@@ -48,37 +48,4 @@ Dashboard
 </section>
 {% endblock content %}
 {% block extra-js %}
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
-<script>
-    const categories = JSON.parse('{{ categories|safe }}');  // Convert Django template data to JavaScript
-    const totalSpendings = JSON.parse('{{ total_spendings|safe }}');
-
-    // Pie chart setup
-    const ctx = document.getElementById('expensePieChart').getContext('2d');
-    const expensePieChart = new Chart(ctx, {
-        type: 'pie',
-        data: {
-            labels: categories,  // Category names from backend
-            datasets: [{
-                data: totalSpendings,  // Corresponding amounts from backend
-                backgroundColor: [
-                    '#007BFF', '#28A745', '#FFC107', '#17A2B8', '#DC3545'
-                ],
-                hoverOffset: 4
-            }]
-        },
-        options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    position: 'top',
-                },
-                title: {
-                    display: true,
-                    text: 'Spendings by Category'
-                }
-            }
-        }
-    });
-</script>
 {% endblock extra-js %}

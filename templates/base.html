@@ -25,11 +25,6 @@
         <!-- Child templates for content -->
         {%endblock%}
     </div>
-
-      <!-- Static JS -->
-      <script src="{% static 'js/jquery.min.js' %}"></script>
-      <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-
       {% block extra-js %}
           <!-- Additional JS (from child templates) can go here -->
           <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  <!-- Include Chart.js -->
