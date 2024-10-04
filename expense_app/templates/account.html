@@ -29,25 +29,20 @@
             
             <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
-
-                <h4>First Name 
-                    <input type="text" name="first_name" value="{{ user.first_name }}" placeholder="First Name" required> 
+            
+                <h4>Username
+                    <input type="text" name="username" value="{{ user.username }}" placeholder="Username" required> 
                 </h4>
-                
-                <h4>Last Name 
-                    <input type="text" name="last_name" value="{{ user.last_name }}" placeholder="Last Name" required>
-                </h4>
-                
+            
                 <h4>Email
                     <input type="email" name="email" value="{{ user.email }}" placeholder="Email" required>
                 </h4>
-                
+            
                 <h4>Account ID
                     <input type="text" value="{{ user.id }}" placeholder="Account ID" readonly>
                 </h4>
-                
+            
                 <div class="buttons">
-
                     <button class="Update-password">Update Password</button>
                     <button type="submit">Save Changes</button>
                 </div>
