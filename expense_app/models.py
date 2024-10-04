@@ -18,8 +18,6 @@ class Category(models.Model):
         return self.name
 
 # Expense Model.py linked with Users(allauth) and Catergory
-
-
 class Expense(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
@@ -32,3 +30,10 @@ class Expense(models.Model):
     def __str__(self):
         return f'{self.category} - {self.amount}'
 
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    profile_image = models.ImageField(upload_to='profile_images/', blank=True, null=True)
+
+    def __str__(self):
+        return self.user.username

@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     font-family:'Roboto' , sans-serif;
+    
 }
 
 /* Global Styles */
@@ -85,7 +86,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 30px;
     font-weight: bold;
 }
-
 
 @media (max-width: 768px) {
     .container {

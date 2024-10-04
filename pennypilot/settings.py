@@ -59,6 +59,10 @@ LOGOUT_REDIRECT_URL = '/'
 ACCOUNT_SIGNUP_REDIRECT_URL = '/accounts/login/'
 #URL redirect users affter loging in succeffuly
 LOGIN_REDIRECT_URL = '/dashboard/'
+#allowing the user to update profile images
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

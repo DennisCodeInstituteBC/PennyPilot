@@ -17,8 +17,20 @@ h2 {
 /* Page Title */
 .profile-img{
     display: flex;
-    justify-content: space-around;
+    justify-content:flex-start;
+    align-items:center;
     margin-top: 40px;
+}
+
+.defaul-image{
+    width: 150px;
+    height: auto;
+}
+
+.upload-btn{
+    height: 40px;
+    width: auto;
+    margin-left: 40px;
 }
 
 /* Account Section */
@@ -50,11 +62,10 @@ h2 {
     background-color: #28A745; /* Green for action buttons */
     color: white;
     font-size: 16px;
-    padding: 10px 20px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-bottom: 30px;
 }
 
 .article button:hover {

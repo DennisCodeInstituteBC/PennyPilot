@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
-from .models import Expense, Category
+from .models import Expense, Category, Profile
 from .forms import ExpenseForm
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, redirect
@@ -24,8 +24,8 @@ def dashboard_view(request):
 
 @login_required
 def expense_view(request):
-    expenses = Expense.objects.filter(user=request.user)  # Filter expenses by the logged-in user
-    categories = Category.objects.all()  # Get all categories (optional, depending on your needs)
+    expenses = Expense.objects.filter(user=request.user)
+    categories = Category.objects.all() 
     return render(request, 'expense.html', {'expenses': expenses, 'categories': categories})
 
 def add_expense(request):
@@ -34,7 +34,7 @@ def add_expense(request):
         if form.is_valid():
             expense = form.save(commit=True)
             expense.user = request.user
-            expense.save()  # Save the expense without linking to a user
+            expense.save()
             return redirect('expense_view') 
     else:
         form = ExpenseForm()
@@ -43,29 +43,42 @@ def add_expense(request):
 
 # adding expenses
 def edit_expense(request, expense_id):
-    # Get the expense by its ID without checking ownership
     expense = get_object_or_404(Expense, id=expense_id)
 
     if request.method == "POST":
         form = ExpenseForm(request.POST, instance=expense)
         if form.is_valid():
-            form.save()  # Update the expense
-            return redirect('expense_view')  # Redirect to the expense list
+            form.save()
+            return redirect('expense_view')  
     else:
         form = ExpenseForm(instance=expense)
 
     return render(request, 'edit_expense.html', {'form': form, 'expense': expense})
 # Delete Expense
 def delete_expense(request, id):
-    # Get the expense by its ID without checking ownership
     expense = get_object_or_404(Expense, id=id)
     
-    if request.method == "POST":  # Optional: confirm deletion via POST request
-        expense.delete()  # Delete the expense
-        return redirect('expense_view')  # Redirect to the expense list
+    if request.method == "POST":  
+        expense.delete()
+        return redirect('expense_view')  
 
-    return render(request, 'confirm_delete.html', {'expense': expense})  # Optional confirmation page
+    return render(request, 'confirm_delete.html', {'expense': expense})
 
 # Account
+@login_required
 def account_view(request):
-    return render(request, 'account.html')
+    profile = Profile.objects.get(user=request.user)
+    
+    if request.method == 'POST':
+        profile_image = request.FILES.get('profile_image')
+        
+        if profile_image:
+            if profile.profile_image and profile.profile_image.url != '/media/default.jpg':
+                default_storage.delete(profile.profile_image.path)
+
+            profile.profile_image = profile_image
+            profile.save()
+
+        return redirect('account')
+    
+    return render(request, 'account.html', {'profile': profile})

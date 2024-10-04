@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 from .views import expense_view, add_expense, edit_expense, delete_expense
 
 urlpatterns = [
@@ -16,4 +18,7 @@ urlpatterns = [
 
     # Account
     path('account/', views.account_view, name='account')
+    
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
