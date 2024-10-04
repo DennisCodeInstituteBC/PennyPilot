@@ -1,6 +1,6 @@
 ## Overview
-
- The Expense Tracker helps users manage and analyze their spending with a simple platform for recording expenses, categorizing them, and generating reports. It aims to make personal finance management easy and effective, supporting better budgeting and financial decision-making.
+![image](https://github.com/user-attachments/assets/5834c6f4-3a7b-4c24-a565-33f6f227edf5)
+The Expense Tracker helps users manage and analyze their spending with a simple platform for recording expenses, categorizing them, and generating reports. It aims to make personal finance management easy and effective, supporting better budgeting and financial decision-making.
 
 **Target Audience:**
 - Individuals: People who want to track and control personal spending.
@@ -161,9 +161,39 @@ User stories are used to help define the functionality from the user's perspecti
 1. **[Montserrat](https://fonts.google.com/specimen/Montserrat)**: A contemporary, stylish sans-serif font with a strong impact, perfect for headings and titles. It delivers a bold, reliable, and professional appearance.  
 2. **[Roboto](https://fonts.google.com/specimen/Roboto)**: A clean and highly legible sans-serif font ideal for body text. Its widespread use in web applications attests to its readability and modern aesthetic.
 
- 
 </details>
+
 ## Agile Methodology
+
+[PennyPilot Project Page](https://github.com/users/DennisCodeInstituteBC/projects/4)
+
+The website's development followed an Agile methodology, using GitHub Projects to organize and manage User Stories. The project started with a week of planning, including a meeting with the mentors to outline the timeline. The initial sprint ran for three weeks, concluding with a mentor review to assess progress and identify areas for improvement. Over the next three weeks, additional features were added, testing was conducted, issues were resolved, and documentation was completed, all leading up to the final review of the finished project.
+
+## Technologies Used
+- [HTML5](https://en.wikipedia.org/wiki/HTML5): Markup Language
+- [CSS3](https://en.wikipedia.org/wiki/CSS): Styling
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript): Programming Language
+- [Python3](https://www.python.org/download/releases/3.0/):  Programming Language
+- [Django 5.1.1](https://docs.djangoproject.com/en/5.1/releases/5.1.1/): Python-based web framework
+- [Git](https://git-scm.com/): Version control system
+- [GitHub](https://github.com/): Hosting Repository
+- [Heroku](https://www.heroku.com/): Cloud-based platform
+- [Blasmiq](https://balsamiq.com/): Mockup tool
+- [Moqups](https://app.moqups.com/): Entity Relationship Diagram
+
+## Features
+
+### Login/Signup Page
+
+The login page serves as the initial screen for both new and returning users upon accessing the website. It follows a consistent theme and layout to ensure a cohesive user experience throughout the platform. The page is designed to be fully responsive, offering an optimized experience across devices, including mobile. Accessibility standards are also prioritized, with clear input fields, error handling, and keyboard navigation. Additionally, security measures, such as password encryption, are in place to protect user data.
+
+### Expense Page
+
+The expense page is designed with simplicity and ease of navigation in mind, featuring a clean layout with a straightforward colour scheme. Clear colour contrasts and button colour coding enhance usability, while key information is centred for quick access. The page is fully responsive, ensuring an optimized experience across all devices, including mobile and tablets. Real-time data updates allow users to instantly see any changes made to their expenses, whether they are adding, editing, or deleting entries, without the need to refresh the page. Additional features such as search filters and sorting options make managing expenses efficient and user-friendly.
+
+### Navigation Bar
+
+The navigation bar is consistent across all pages once a user is logged in, maintaining a unified look and feel throughout the site. It features a hover effect that highlights links as users interact with them, making navigation more intuitive. The layout is simple, with a visible logout button set apart from the other menu items to prevent confusion. This design ensures easy navigation while providing a smooth user experience.
 
 ## Testing
 
@@ -209,7 +239,7 @@ DATABASES = {
 Install dependencies:
 
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 Create a Procfile with the following content:
 ```
@@ -220,9 +250,55 @@ Ensure the ALLOWED_HOSTS in your settings.py includes the Heroku domain:
 ```
 ALLOWED_HOSTS = ['pennypilot-ed4fcf68cb92.herokuapp.com']
 ```
-Open your Heroku app:
----need to add more---
+Open your (Sign up or Log in) Heroku app:
 
+- If you don’t have a Heroku account, visit [Heroku's](https://www.heroku.com/) website and sign up for an account. If you already have an account, log in.
+
+Create a New App:
+
+- Once logged in, go to the Heroku Dashboard.
+- Click on the “New” button in the top right corner and select “Create new app.”
+
+- Choose a unique name for your app and select your preferred region, then click “Create app.”
+
+Connect to Your GitHub Repository:
+
+- On your app’s dashboard, navigate to the “Deploy” tab.
+- In the “Deployment method” section, select “GitHub.”
+
+- Authorize Heroku to access your GitHub account if prompted.
+- Search for your repository and click “Connect.”
+
+Configure Environment Variables:
+
+- Navigate to the “Settings” tab.
+- Click on “Reveal Config Vars.”
+- Add your environment variables, such as **SECRET_KEY** and **DATABASE_URL** by entering the key in the "KEY" field and the value in the "VALUE" field.
+
+Deploy Your App:
+
+- In the “Deploy” tab, scroll down to the “Manual Deploy” section.
+- Choose the branch you want to deploy (usually main) and click “Deploy Branch.”
+- Heroku will start the deployment process. You can view the logs for any errors or confirmation messages during this process.
+
+Run Database Migrations:
+
+- Once the deployment is complete, navigate to the “More” button in the top right corner of the dashboard and select “Run console.”
+
+- In the command line interface, run:
+```
+python manage.py migrate
+```
+Collect Static Files:
+- Still in the console, run the following command to collect static files:
+```
+python manage.py collectstatic
+```
+Open Your App:
+
+After deployment and migrations are complete, go back to the “Overview” tab.
+
+Click on the “Open app” button to view your live application.
 
 ## Credits
 - [W3School](https://www.w3schools.com/)
@@ -231,3 +307,11 @@ Open your Heroku app:
 - Youtube Tutorials
     - [Django Tutorial #3 - URLs and Views](https://www.youtube.com/watch?v=TblSa29DX6I&ab_channel=NetNinja)
     - [Django Tutorial #6 - Django Models](https://www.youtube.com/watch?v=5zNR3E6WRLE&ab_channel=NetNinja)
+- [Djecrety](https://djecrety.ir/)
+- [Django-AllAuth](https://docs.allauth.org/en/latest/)
+- Image stocks
+   - [Pexels](https://www.pexels.com/)
+   - [Unsplash](https://unsplash.com/)
+   - [Stockvault](https://www.stockvault.net/)
+   - [Pixabay](https://pixabay.com/)
+
