@@ -2,6 +2,7 @@ from django.urls import path
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
+from allauth.account.views import PasswordChangeView
 from .views import expense_view, add_expense, edit_expense, delete_expense
 
 urlpatterns = [
@@ -17,7 +18,8 @@ urlpatterns = [
 
 
     # Account
-    path('account/', views.account_view, name='account')
+    path('account/', views.account_view, name='account'),
+    path('accounts/password/change/', PasswordChangeView.as_view(), name='account_change_password'),
     
 ]
 if settings.DEBUG:
