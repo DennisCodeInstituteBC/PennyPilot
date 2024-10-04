@@ -1,4 +1,6 @@
 ## Overview
+[Live View](https://pennypilot-ed4fcf68cb92.herokuapp.com/accounts/login/)
+
 ![image](https://github.com/user-attachments/assets/5834c6f4-3a7b-4c24-a565-33f6f227edf5)
 The Expense Tracker helps users manage and analyze their spending with a simple platform for recording expenses, categorizing them, and generating reports. It aims to make personal finance management easy and effective, supporting better budgeting and financial decision-making.
 
@@ -186,16 +188,105 @@ The website's development followed an Agile methodology, using GitHub Projects t
 ### Login/Signup Page
 
 The login page serves as the initial screen for both new and returning users upon accessing the website. It follows a consistent theme and layout to ensure a cohesive user experience throughout the platform. The page is designed to be fully responsive, offering an optimized experience across devices, including mobile. Accessibility standards are also prioritized, with clear input fields, error handling, and keyboard navigation. Additionally, security measures, such as password encryption, are in place to protect user data.
+<details>
+ <summary> Images </summary>
+ 
+![image](https://github.com/user-attachments/assets/eca5e6a6-71e7-461a-a091-eab80d21597a)
+![image](https://github.com/user-attachments/assets/af80eaa1-6e55-4f79-bae1-4578ca12226e)
+</details>
 
 ### Expense Page
 
 The expense page is designed with simplicity and ease of navigation in mind, featuring a clean layout with a straightforward colour scheme. Clear colour contrasts and button colour coding enhance usability, while key information is centred for quick access. The page is fully responsive, ensuring an optimized experience across all devices, including mobile and tablets. Real-time data updates allow users to instantly see any changes made to their expenses, whether they are adding, editing, or deleting entries, without the need to refresh the page. Additional features such as search filters and sorting options make managing expenses efficient and user-friendly.
+<details>
+ <summary> Images </summary>
+ 
+![image](https://github.com/user-attachments/assets/d14352f1-cde2-4f10-87d6-c878b18c108d)
+![image](https://github.com/user-attachments/assets/1d4b2410-163d-4cfc-b29a-b150e24d5091)
+</details>
+
 
 ### Navigation Bar
 
 The navigation bar is consistent across all pages once a user is logged in, maintaining a unified look and feel throughout the site. It features a hover effect that highlights links as users interact with them, making navigation more intuitive. The layout is simple, with a visible logout button set apart from the other menu items to prevent confusion. This design ensures easy navigation while providing a smooth user experience.
+<details>
+ <summary> Images </summary>
+ 
+![image](https://github.com/user-attachments/assets/367c77c8-a67d-47a2-8fd3-cc32a6a24bf1)
+![image](https://github.com/user-attachments/assets/d6361f50-80fd-4163-856f-013c2cae5413)
+</details>
+
+### Account Page
+
+The Accounts section of the app allows users to manage their personal information and account settings easily. Users can update their passwords for enhanced security, ensuring that they maintain their account's confidentiality by changing their passwords whenever necessary. This process is simple and user-friendly, guiding users through the necessary steps to create a new password. Additionally, users can view their profile information, including their username, email address, profile picture (if added). This feature enables users to review their details for accuracy and make any necessary updates to their profile information.
+<details>
+ <summary> Images </summary>
+ 
+![image](https://github.com/user-attachments/assets/e76c6f3e-693b-49cc-834f-16fba5a1b72e)
+![image](https://github.com/user-attachments/assets/0a6ddaba-261b-4641-a93f-2e4665b12800)
+</details>
 
 ## Testing
+I acknowledge the importance of keeping the secret key confidential. Although it was unintentionally exposed in earlier commits, this issue has been rectified in subsequent updates to ensure that the key remains hidden
+
+This project utilizes the [W3C HTML Validator](https://validator.w3.org/) to ensure code quality and compliance with HTML standards, helping to identify errors and improve user experience across different browsers.
+<details>
+<summary> HTML Validator </summary>
+ 
+![image](https://github.com/user-attachments/assets/0ecd1854-1d82-40a0-8587-229d58008800)
+</details>
+
+This project utilizes the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) to ensure code quality and compliance with CSS standards, helping to identify errors and enhance the styling of the application.
+<details>
+<summary> CSS Validator </summary>
+ 
+![image](https://github.com/user-attachments/assets/49bcd009-b574-4739-978b-d9dc0a6df4ab)
+</details>
+
+This project utilizes [PEP8 CI](https://pep8ci.herokuapp.com/) to ensure adherence to Python coding standards, helping to identify style violations and improve code readability and maintainability.
+<details>
+ <summary>CI Python Linter Validator</summary>
+ 
+ ![image](https://github.com/user-attachments/assets/2750b35c-8c3a-43f3-aeb1-f779884233e8)
+</details>
+
+### Lighthouse Testing
+This project employs Lighthouse to assess web performance, accessibility, and SEO, providing insights and recommendations to enhance user experience and optimize overall site quality.
+![image](https://github.com/user-attachments/assets/8d12c7ba-3dd5-4544-afe4-b71667aa3f4e)
+
+
+### Functionality Testing
+
+This section outlines the functionality testing conducted for the application, ensuring that all features meet user requirements. Each user story is assessed against acceptance criteria to verify proper implementation. The results indicate whether each test passed or failed, providing insights into areas for improvement.
+
+| Test Number | User Story | Acceptance Criteria | Pass| Fail | 
+| --- | --- | --- | --- | --- |
+| No.1 | As a new user, I want to create an account to securely track my expenses and access my data from any device. | Users can sign up using an email and password. | ✔️ |  |
+| | |Users can log in with credentials. | ✔️ |  |
+| No.2 |As a user, I want to add my daily expenses easily to keep track of my spending in real-time.| Users can enter the expense amount, category, date, and notes. | ✔️ |  |
+| | | Users can save the expense entry. | ✔️ |  |
+| | | User receives confirmation that the expense has been added. |  | ❌ |
+| No.3 |As a user, I want to categorise my expenses so that I can better understand where my money is going. | Users can select from predefined categories or create custom categories. | ✔️ |  |
+| | | Users can view and edit categories. | ✔️ |  |
+| No.4 |As a user, I want to view a summary of my expenses by category and date range so that I can see where I’m spending the most. | Users can generate and view reports with graphs and charts. |  | ❌ |
+| | | As a user, I want to categorise my expenses so that I can better understand where my money is going. |  | ❌ |
+| No.5 |As a user, I want to be able to edit or delete my expenses so that I can correct mistakes or remove incorrect entries. | Users can edit expense details (amount, category, date, notes). | ✔️ |  |
+| | | Users can delete expenses. | ✔️ |  |
+| | | User receives a confirmation of changes or deletions. | ✔️ |  |
+| No.6 |As a user, I want to securely log in and manage my account details so that my data is protected and I can keep my information up to date. | Users can log in and log out securely. | ✔️ |  |
+| | | Users can update profile information and change the password. | ✔️ |  |
+| No.7 |As a user, I want to search for specific expenses by keyword so that I can easily find and review past entries. | Users can enter a search term to find expenses. |  | ❌ |
+| | | Search results display matching entries.|  | ❌ |
+| No.8 |As a user, I want to receive reminders to add my expenses so that I don’t forget to track my spending regularly. | Users can set up reminders for adding expenses. |  | ❌ |
+| | | Users receive notifications according to their preferences. |  | ❌ |
+| No.9 |As a user, I want to filter my expenses by amount, category, and date range so that I can analyse specific segments of my spending. | Users can apply filters to view expenses by amount, category, and date range.|  | ❌ |
+| | | Filtered results display accurately. |  | ❌ |
+
+### Further Feature
+
+To enhance the user experience and functionality of the application, several key features are planned for future development. First, the implementation of filtering options will allow users to customize their expense views by various parameters such as amount, category, and date range, making it easier to analyze spending habits. Additionally, search functionality will be introduced to enable users to quickly find specific expenses by entering relevant keywords, streamlining the process of reviewing past entries.
+
+Furthermore, the incorporation of data visualization tools, including charts and graphs, will provide users with a clear and engaging summary of their spending patterns over time, helping them make informed financial decisions based on tracked expenses. Lastly, allowing users to upload profile images will add a personal touch to their accounts and enhance the overall user interface. These features will improve the application's usability and empower users to manage their finances more effectively.
 
 ## Deployment
 
