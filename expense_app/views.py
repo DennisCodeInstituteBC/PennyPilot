@@ -14,34 +14,25 @@ from django.db.models import Sum
 # Create your views here.
 
 # Dashboard
+@login_required
 def dashboard_view(request):
-    # Fetch and group expenses by category
     expenses = Expense.objects.filter(user=request.user).values('category__name').annotate(total=Sum('amount'))
-
-    # Extract categories and total spendings
-    categories = [expense['category__name'] for expense in expenses]
-    total_spendings = [expense['total'] for expense in expenses]
-
-    context = {
-        'categories': categories,
-        'total_spendings': total_spendings,
-    }
-
+    return render(request, 'dashboard.html', {'expenses': expenses})
     return render(request, 'dashboard.html', context)
 
 # Expense table view
 
-# @login_required
+@login_required
 def expense_view(request):
-    expenses = Expense.objects.filter()
-    categories = Category.objects.all()
+    expenses = Expense.objects.filter(user=request.user)  # Filter expenses by the logged-in user
+    categories = Category.objects.all()  # Get all categories (optional, depending on your needs)
     return render(request, 'expense.html', {'expenses': expenses, 'categories': categories})
 
 def add_expense(request):
     if request.method == "POST":
         form = ExpenseForm(request.POST)
         if form.is_valid():
-            expense = form.save(commit=False)
+            expense = form.save(commit=True)
             expense.user = request.user
             expense.save()  # Save the expense without linking to a user
             return redirect('expense_view') 
