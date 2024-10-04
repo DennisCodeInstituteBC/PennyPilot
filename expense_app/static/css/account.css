@@ -63,17 +63,19 @@ h2 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .navbar {
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-around;
-    }
 
     .article {
         margin: 20px;
+        max-width: fit-content;
+    }
+
+    .account-template{
+        width: min-content;
+    }
+
+    .article button {
+        font-size: 12px;
+        margin: 0 0 0 30px;
     }
 }
+

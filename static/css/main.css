@@ -86,15 +86,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
-/* footer */
-
-footer {
-    background-color: #808080;
-    text-align: center;
-    padding: 1rem 0;
-    color: #fff;
-    font-weight: bold;
-}
 
 @media (max-width: 768px) {
     .container {
@@ -106,7 +97,8 @@ footer {
         height: 8vh;
         padding: 7px;
         flex-direction: row;
-        width: 380px;
+        width: -webkit-fill-available;
+        border-radius: 0;
     }
 
     .navbar h2 {

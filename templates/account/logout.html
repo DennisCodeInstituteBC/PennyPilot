@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block extra-css %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock extra-css %}
 
 {% load i18n %}
 

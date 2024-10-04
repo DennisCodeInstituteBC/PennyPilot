@@ -5,20 +5,28 @@ from .forms import ExpenseForm
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, redirect
 
+# For graph in dashbaord
+from django.shortcuts import render
+from .models import Expense
+from django.db.models import Sum
+
 
 # Create your views here.
 
 # Dashboard
 def dashboard_view(request):
-    expenses = Expense.objects.all()  # Get all expenses
-    categories = [expense.category.name for expense in expenses]  # Get expense categories
-    amounts = [expense.amount for expense in expenses]  # Get expense amounts
-    
+    # Fetch and group expenses by category
+    expenses = Expense.objects.filter(user=request.user).values('category__name').annotate(total=Sum('amount'))
+
+    # Extract categories and total spendings
+    categories = [expense['category__name'] for expense in expenses]
+    total_spendings = [expense['total'] for expense in expenses]
+
     context = {
         'categories': categories,
-        'amounts': amounts,
+        'total_spendings': total_spendings,
     }
-    
+
     return render(request, 'dashboard.html', context)
 
 # Expense table view
