@@ -28,9 +28,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["8000-denniscodein-pennypilot-5ri2dnzyl34.ws.codeinstitute-ide.net",
+ALLOWED_HOSTS = ["8000-denniscodein-pennypilot-zfwgdl3m2gg.ws.codeinstitute-ide.net",
                 "pennypilot-ed4fcf68cb92.herokuapp.com"]
 
 # code to allow IDE and Heroku to pass CSRF Verification
