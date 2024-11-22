@@ -4,6 +4,8 @@ from .models import Expense, Category, Profile
 from .forms import ExpenseForm
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, redirect
+from django.contrib import messages
+
 
 # For graph in dashbaord
 from django.shortcuts import render
@@ -28,6 +30,7 @@ def expense_view(request):
     categories = Category.objects.all() 
     return render(request, 'expense.html', {'expenses': expenses, 'categories': categories})
 
+# Adding Expense
 def add_expense(request):
     if request.method == "POST":
         form = ExpenseForm(request.POST)
@@ -35,13 +38,16 @@ def add_expense(request):
             expense = form.save(commit=False)
             expense.user = request.user
             expense.save()
+            messages.success(request, "Expense Added Successfully!")
             return redirect('expense_view') 
+        else:
+            messages.error(request, "Failed to add expense. Please try again.")
     else:
         form = ExpenseForm()
 
     return render(request, 'add_expense.html', {'form': form})
 
-# adding expenses
+# Editing expenses
 def edit_expense(request, expense_id):
     expense = get_object_or_404(Expense, id=expense_id)
 
@@ -49,17 +55,22 @@ def edit_expense(request, expense_id):
         form = ExpenseForm(request.POST, instance=expense)
         if form.is_valid():
             form.save()
+            messages.success(request, "Expense Updated Successfully!")
             return redirect('expense_view')  
+        else:
+            messages.error(request, "Failed to update expense. Please try again.")
     else:
         form = ExpenseForm(instance=expense)
 
     return render(request, 'edit_expense.html', {'form': form, 'expense': expense})
+    
 # Delete Expense
 def delete_expense(request, id):
     expense = get_object_or_404(Expense, id=id)
     
     if request.method == "POST":  
         expense.delete()
+        messages.success(request, "Expense Deleted Successfully!")
         return redirect('expense_view')  
 
     return render(request, 'confirm_delete.html', {'expense': expense})

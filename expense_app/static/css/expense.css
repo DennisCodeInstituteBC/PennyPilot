@@ -98,6 +98,54 @@
     background-color: #52070e;
 }
 
+
+/* Flash message container */
+.flash-messages {
+    margin: 20px auto;
+    width: 100%;
+}
+
+/* Flash message box */
+.custom-alert {
+    position: relative;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Success message */
+.custom-alert.success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+/* Error message */
+.custom-alert.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .article {

@@ -18,8 +18,22 @@
         <a id="logout" href="{% url 'account_logout' %}">Logout</a>
     </nav>
     
+     <!-- Flash Messages -->
+     <div class="flash-messages">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="custom-alert {{ message.tags }}">
+                    <span>{{ message }}</span>
+                    <button class="close-btn" onclick="this.parentElement.style.display='none';">✖</button>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+
     <!-- Content Area -->
     <article class="article">
+        
+
         <div id="Page-Title">Expense List</div>
         
         <!-- Add New Expense Button -->
