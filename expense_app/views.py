@@ -78,18 +78,24 @@ def delete_expense(request, id):
 # Account
 @login_required
 def account_view(request):
-    profile = Profile.objects.get(user=request.user)
-    
+    try:
+        # Ensure the Profile exists or create it if missing
+        profile, created = Profile.objects.get_or_create(user=request.user)
+    except Profile.DoesNotExist:
+        return redirect('create_profile')  # Redirect to a profile creation page if needed
+
     if request.method == 'POST':
         profile_image = request.FILES.get('profile_image')
-        
+
         if profile_image:
-            if profile.profile_image and profile.profile_image.url != '/media/default.jpg':
+            # Delete the old image if it exists and isn't the default
+            if profile.profile_image and profile.profile_image.name != 'default.jpg':
                 default_storage.delete(profile.profile_image.path)
 
+            # Save the new image
             profile.profile_image = profile_image
             profile.save()
 
         return redirect('account')
-    
+
     return render(request, 'account.html', {'profile': profile})
